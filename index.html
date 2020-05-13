@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Palacy - Agendamento</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Palacy Barbearia">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <section id="content">
+        <arcticle class=item1>
+            <section id="top-navbar" class="top-navbar">
+                <article><img class="img-logo" src="4c16bb67-91f3-462a-a525-df2bb0758e54.jpg" alt="logo"></article>
+                <article><h2 class="title-agendamento">FAÇA AGORA O SEU <strong>AGENDAMENTO</strong></h2></article>    
+            </section>
+        </arcticle>
+        
+        <arcticle class=item2>
+            <section id="progress-navbar" class="progress-navbar">
+                <article class="item"><button type="button" class="progress-navbar-buttom">a</button></article>
+                <article class="item"><button type="button" class="progress-navbar-buttom">a</button></article>
+                <article class="item"><button type="button" class="progress-navbar-buttom">a</button></article>
+                <article class="item"><button type="button" class="progress-navbar-buttom">a</button></article>
+                <article class="item"><button type="button" class="progress-navbar-buttom">a</button></article>
+            </section>
+        </arcticle>
+
+        <arcticle class=item3>
+            <section id="bottom-navbar">
+                <article class="item"><button type="button" class="bottom-navbar-buttom">a</button></article>
+                <article class="item"><button type="button" class="bottom-navbar-buttom">a</button></article>
+                <article class="item"><button type="button" class="bottom-navbar-buttom">a</button></article>
+            </section>
+        </arcticle>
+    </section>
+<!--
+    <section class="navbar">
+        <a href="#home" class="active"><img class="navbar-icon" src="source/calendar-check-regular.svg">AGENDAR</a>
+        <a href="#news"><img class="navbar-icon" src="source/history-solid.svg">HISTÓRICO</a>
+        <a href="#news"><img class="navbar-icon" src="source/user-solid.svg">PERFIL</a>
+    </section>
+-->
+	
+
+	<style type="text/css">
+        
+        body {
+            margin: 0px;
+        }
+        
+        #content{
+            display: flex;
+            flex-direction: column;        }
+        
+        #top-navbar{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            height: auto;
+            left: 0px;
+            top: 0px;
+            background-color: #fff1d6;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .img-logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+            height: auto;
+        }
+
+        .title-agendamento{
+			padding: 50px;
+			text-align: center;
+            color: #2a0001;
+            font-size: 25px;
+		}
+
+		.h2 { 
+			font-weight:bold;
+			margin: 0px;
+            color: #2a0001 !important;
+        }
+        
+        #progress-navbar{
+            display: flex;
+            flex-direction: row;
+            margin-top: -40px;
+            width: 100%;
+            justify-content: space-around;
+        }
+    
+        .progress-navbar-buttom{
+            position: relative;
+            width: 62px;
+            height: 62px;
+            background: #9B9B9B;
+            border-radius: 10px;
+        }
+        
+        .progress-navbar-buttom:focus {
+            background: #2A0001;
+        }
+        
+            background: #2A0001;
+        }
+        
+        .progress-navbar-buttom-ok{
+            background: #698C5F;
+        }
+
+		#bottom-navbar {
+            background-color: #2a0001;
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .bottom-navbar-buttom {
+            position: relative;
+            width: 62px;
+            height: 62px;
+            background: #f2f2f2;
+            border-radius: 10px;
+
+        }
+
+        .bottom-navbar-buttom:focus {
+            background: red;
+            color: black;
+        }
+
+	</style>
+
+</body>
+</html>
