@@ -1,19 +1,17 @@
 body {
   margin: 0px;
-  font-family: "Roboto";
-}
+  font-family: 'Roboto'; }
 
 #container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
-}
+  min-height: 100vh; }
 
 #top-navbar {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   position: relative;
   width: 100%;
   height: auto;
@@ -21,19 +19,17 @@ body {
   top: 0px;
   background-color: #fff1d6;
   border-radius: 0px 0px 30px 30px;
-}
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25); }
 
 .img-logo {
   display: flex;
   margin: 0 auto;
   height: 60vw;
-  width: auto;
-}
+  width: auto; }
 
 .img-logo-min {
   height: 30vw;
-  transition: height 0.7s;
-}
+  transition: height 0.7s; }
 
 .title-agendamento {
   padding: 50px;
@@ -44,42 +40,40 @@ body {
   margin: 0px;
   font-style: normal;
   font-weight: normal;
-  line-height: 28px;
-}
+  line-height: 28px; }
 
 #progress-navbar {
-  position: relative;
+  top: 1vw;
+  position: fixed;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin: -30px 5px 0 5px;
   width: 100%;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
+
+#progress-navbar i {
+  font-size: 5vw;
+  text-align: center; }
 
 .progress-navbar-buttom {
   position: relative;
-  width: 62px;
-  height: 62px;
+  width: 12vw;
+  height: 12vw;
   background: #9B9B9B;
   border-radius: 10px;
-  color: #2A0001;
-}
+  color: #2A0001; }
 
 .progress-navbar-buttom:focus {
   background: #2A0001;
-  color: #fff;
-}
+  color: #fff; }
 
 .progress-navbar-buttom-ok {
-  background: #698C5F;
-}
+  background: #698C5F; }
 
 .progress-navbar-icon {
   width: 25px;
   height: auto;
-  align-content: center;
-}
+  align-content: center; }
 
 .progress-navbar-icon-dot {
   font-size: 12vw;
@@ -87,16 +81,16 @@ body {
   line-height: 0;
   margin-top: 20px;
   color: #2A0001;
-  pointer-events: none;
-}
+  pointer-events: none; }
 
 iframe {
   position: relative;
   border: none;
   width: 100%;
-  height: 50vw;
-  background: blue;
-}
+  overflow: auto; }
+
+.conteudo {
+  height: 100vw; }
 
 #bottom-navbar {
   background-color: #2A0001;
@@ -105,8 +99,7 @@ iframe {
   bottom: 0;
   width: 100%;
   flex-direction: row;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 .bottom-navbar button {
   position: relative;
@@ -118,48 +111,35 @@ iframe {
   line-height: 5vw;
   font-size: 1.8vw;
   text-align: center;
-  color: #fff1d6;
-}
+  color: #fff1d6; }
 
 .bottom-navbar button.active {
   background: #f2f2f2;
   color: #2A0001;
-  animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
+  animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 .bottom-navbar-icon {
   width: 15px;
-  height: auto;
-}
+  height: auto; }
 
 .disabled {
   font-size: 15px;
-  transition: font-size 2s;
-}
+  transition: font-size 0.7s; }
 
 @keyframes slide-top-logoholder {
   0% {
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
-    transform: translateY(30%);
-  }
-}
+    transform: translateY(30%); } }
 @keyframes slide-top-navbar {
   0% {
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
-    transform: translateY(-20px);
-  }
-}
+    transform: translateY(-20px); } }
 @keyframes slide-bck-left {
   0% {
-    transform: translateZ(0) translateX(0);
-  }
+    transform: translateZ(0) translateX(0); }
   100% {
-    transform: translateZ(-400px) translateX(-200px);
-  }
-}
+    transform: translateZ(-400px) translateX(-200px); } }
 
 /*# sourceMappingURL=styles.css.map */

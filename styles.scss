@@ -12,12 +12,12 @@ body {
     flex-direction: column; 
     flex-wrap: nowrap;
     width: 100%;
+    min-height: 100vh;
 }
 
 #top-navbar{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     position: relative;
     width: 100%;
     height: auto;
@@ -25,6 +25,7 @@ body {
     top: 0px;
     background-color: $color-primary;
     border-radius: 0px 0px 30px 30px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
 }
 
 .img-logo{
@@ -53,19 +54,25 @@ body {
 }
 
 #progress-navbar{
-    position: relative;
+    top: 1vw;
+    position: fixed;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    margin: -30px 5px 0 5px;
     width: 100%;
     justify-content: space-around;
+    
+}
+
+#progress-navbar i{
+    font-size: 5vw;
+    text-align: center;
 }
 
 .progress-navbar-buttom{
     position: relative;
-    width: 62px;
-    height: 62px;
+    width: 12vw;
+    height: 12vw;
     background: #9B9B9B;
     border-radius: 10px;
     color: $color-secondary;
@@ -103,12 +110,11 @@ iframe{
     position: relative;
     border: none;
     width: 100%;
-    height: 50vw;
-    background: blue;
+    overflow: auto;
 }
 
 .conteudo{
-    
+    height: 100vw;
 }
 
 #bottom-navbar {
@@ -147,7 +153,8 @@ iframe{
 
 .disabled{
     font-size: 15px;
-    transition: font-size 2s;
+    transition: font-size 0.7s;
+
 }
 
 @keyframes slide-top-logoholder {
