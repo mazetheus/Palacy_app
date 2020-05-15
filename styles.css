@@ -1,0 +1,165 @@
+body {
+  margin: 0px;
+  font-family: "Roboto";
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#top-navbar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  background-color: #fff1d6;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.img-logo {
+  display: flex;
+  margin: 0 auto;
+  height: 60vw;
+  width: auto;
+}
+
+.img-logo-min {
+  height: 30vw;
+  transition: height 0.7s;
+}
+
+.title-agendamento {
+  padding: 50px;
+  text-align: center;
+  color: #2A0001;
+  line-height: 3vw;
+  font-size: 5vw;
+  margin: 0px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+#progress-navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: -30px 5px 0 5px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.progress-navbar-buttom {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  background: #9B9B9B;
+  border-radius: 10px;
+  color: #2A0001;
+}
+
+.progress-navbar-buttom:focus {
+  background: #2A0001;
+  color: #fff;
+}
+
+.progress-navbar-buttom-ok {
+  background: #698C5F;
+}
+
+.progress-navbar-icon {
+  width: 25px;
+  height: auto;
+  align-content: center;
+}
+
+.progress-navbar-icon-dot {
+  font-size: 12vw;
+  margin: 0;
+  line-height: 0;
+  margin-top: 20px;
+  color: #2A0001;
+  pointer-events: none;
+}
+
+iframe {
+  position: relative;
+  border: none;
+  width: 100%;
+  height: 50vw;
+  background: blue;
+}
+
+#bottom-navbar {
+  background-color: #2A0001;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bottom-navbar button {
+  position: relative;
+  background-color: inherit;
+  width: 62px;
+  height: 62px;
+  border-radius: 10px;
+  border: 0px;
+  line-height: 5vw;
+  font-size: 1.8vw;
+  text-align: center;
+  color: #fff1d6;
+}
+
+.bottom-navbar button.active {
+  background: #f2f2f2;
+  color: #2A0001;
+  animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.bottom-navbar-icon {
+  width: 15px;
+  height: auto;
+}
+
+.disabled {
+  font-size: 15px;
+  transition: font-size 2s;
+}
+
+@keyframes slide-top-logoholder {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30%);
+  }
+}
+@keyframes slide-top-navbar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes slide-bck-left {
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
+  100% {
+    transform: translateZ(-400px) translateX(-200px);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
