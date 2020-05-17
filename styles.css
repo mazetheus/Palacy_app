@@ -1,38 +1,46 @@
 body {
   margin: 0px;
-  font-family: 'Roboto'; }
+  font-family: "Roboto";
+}
 
 #container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 #top-navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
+  flex-wrap: nowrap;
+  align-items: center;
   width: 100%;
   height: auto;
   left: 0px;
   top: 0px;
   background-color: #fff1d6;
   border-radius: 0px 0px 30px 30px;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25); }
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
+}
 
 .img-logo {
   display: flex;
   margin: 0 auto;
-  height: 60vw;
-  width: auto; }
+  height: 30vw;
+  width: auto;
+  padding: 2vw;
+}
 
 .img-logo-min {
-  height: 30vw;
-  transition: height 0.7s; }
+  height: 20vw;
+  transition: height 0.7s;
+}
 
 .title-agendamento {
-  padding: 50px;
+  padding-left: 5vw;
   text-align: center;
   color: #2A0001;
   line-height: 3vw;
@@ -40,20 +48,22 @@ body {
   margin: 0px;
   font-style: normal;
   font-weight: normal;
-  line-height: 28px; }
+  line-height: 28px;
+}
 
 #progress-navbar {
-  top: 1vw;
-  position: fixed;
+  padding: 3vh 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 #progress-navbar i {
   font-size: 5vw;
-  text-align: center; }
+  text-align: center;
+}
 
 .progress-navbar-buttom {
   position: relative;
@@ -61,19 +71,23 @@ body {
   height: 12vw;
   background: #9B9B9B;
   border-radius: 10px;
-  color: #2A0001; }
+  color: #2A0001;
+}
 
 .progress-navbar-buttom:focus {
   background: #2A0001;
-  color: #fff; }
+  color: #fff;
+}
 
 .progress-navbar-buttom-ok {
-  background: #698C5F; }
+  background: #698C5F;
+}
 
 .progress-navbar-icon {
   width: 25px;
   height: auto;
-  align-content: center; }
+  align-content: center;
+}
 
 .progress-navbar-icon-dot {
   font-size: 12vw;
@@ -81,16 +95,22 @@ body {
   line-height: 0;
   margin-top: 20px;
   color: #2A0001;
-  pointer-events: none; }
+  pointer-events: none;
+}
+
+.toppart {
+  position: fixed;
+  width: 100vw;
+  background-color: #FFF;
+}
 
 iframe {
   position: relative;
   border: none;
   width: 100%;
-  overflow: auto; }
-
-.conteudo {
-  height: 100vw; }
+  height: 100vh;
+  overflow: auto;
+}
 
 #bottom-navbar {
   background-color: #2A0001;
@@ -99,7 +119,8 @@ iframe {
   bottom: 0;
   width: 100%;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .bottom-navbar button {
   position: relative;
@@ -108,38 +129,91 @@ iframe {
   height: 62px;
   border-radius: 10px;
   border: 0px;
-  line-height: 5vw;
+  line-height: 3vw;
   font-size: 1.8vw;
   text-align: center;
-  color: #fff1d6; }
+  color: #fff1d6;
+}
 
 .bottom-navbar button.active {
   background: #f2f2f2;
   color: #2A0001;
-  animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 
 .bottom-navbar-icon {
-  width: 15px;
-  height: auto; }
+  width: 4vw;
+  height: auto;
+}
 
-.disabled {
-  font-size: 15px;
-  transition: font-size 0.7s; }
+#perfil .logo-holder {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#perfil .top-navbar {
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+  font-family: "Roboto";
+}
+#perfil .img-logo {
+  width: 60vw;
+  height: auto;
+}
+#perfil h2 {
+  padding: 8vw 10vw;
+}
+#perfil input {
+  border: none;
+  border-bottom: 0.5vw solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+}
+#perfil .celular {
+  margin-top: 2vh;
+  font-size: 5vw;
+  color: #2A0001;
+}
+#perfil ::placeholder {
+  color: #2A0001;
+  opacity: 0.8;
+}
+#perfil button {
+  display: flex;
+  border: none;
+  margin-top: 15vh;
+  align-items: center;
+  padding: 2vh 15vw 2vh 15vw;
+  margin-bottom: 5vh;
+  background-color: #2A0001;
+  color: #fff1d6;
+  border-radius: 30px;
+  font-size: 6vw;
+}
 
 @keyframes slide-top-logoholder {
   0% {
-    transform: translateY(0); }
+    transform: translateY(0);
+  }
   100% {
-    transform: translateY(30%); } }
+    transform: translateY(30%);
+  }
+}
 @keyframes slide-top-navbar {
   0% {
-    transform: translateY(0); }
+    transform: translateY(0);
+  }
   100% {
-    transform: translateY(-20px); } }
+    transform: translateY(-20px);
+  }
+}
 @keyframes slide-bck-left {
   0% {
-    transform: translateZ(0) translateX(0); }
+    transform: translateZ(0) translateX(0);
+  }
   100% {
-    transform: translateZ(-400px) translateX(-200px); } }
+    transform: translateZ(-400px) translateX(-200px);
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
