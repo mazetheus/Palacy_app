@@ -3,133 +3,108 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css">
-    
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <style>
-body {
-    font-family: Arial;
-    margin: 0px;
-    }
 
-/* Style the tab */
-.tab {
-  overflow: auto;
-    width: 100%;
-    align-content: center;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-    position: fixed;
-    display: flex;
-    flex
-}
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding-top: 30vh;
-  border-top: none;
-  text-align: justify;
-}
 </style>
 </head>
+
 <body>
 
-   <div class="toppart">
-    <article id="logoholder" class="item-container">
-        <arcticle id="top-navbar" class="top-navbar">
-            <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
-            <article><h2 id="h2-agendamento" class="title-agendamento">FAÇA AGORA O SEU <br><strong>AGENDAMENTO</strong></h2></article>    
-        </arcticle>
+    <section id="agendar">
+       <div class="fixed-top">
+        <article id="logoholder" class="item-container">
+            <arcticle id="top-navbar" class="top-navbar">
+                <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
+                <article><h2 id="h2-agendamento" class="title-agendamento">FAÇA AGORA O SEU <br><strong>AGENDAMENTO</strong></h2></article>    
+            </arcticle>
 
-    </article>
+        </article>
 
-<arcticle id="progress-navbar" class="progress-navbar">
+    <arcticle class="progress-navbar">
 
-         <!-- ÍCONE UNIDADE -->
-           <article class="item"><button type="button" class="tablinks progress-navbar-buttom" onclick="openCity(event, 'London')" id="defaultOpen">
-            <i class='fas fa-map-marker-alt'></i></button></article>
+<!--         ÍCONE UNIDADE -->
+           <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabUnidade')" id="defaultOpen">
+            <i class='fas fa-map-marker-alt'></i></button>
 
 <!--         ÍCONE SERVIÇO   -->
-           <article class="item"><button type="button tablinks" class="progress-navbar-buttom" onclick="openCity(event, 'Paris')">
-           <i class='fas fas fa-cut'></i></button></article>
+           <button type="button tablinks" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabServico')">
+           <i class='fas fas fa-cut'></i></button>
 
 <!--         ÍCONE BARBEIRO -->        
            
-           <article class="item tablinks"><button type="button" class="progress-navbar-buttom" onclick="openCity(event, 'Tokyo')">
-            <i class='fas far fa-user'></i></button></article>
+           <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabBarbeiro')">
+            <i class='fas far fa-user'></i></button>
 
 
-    <!-- ÍCONE DATA -->
-    <article class="item"><button type="button" class="progress-navbar-buttom">
-                <i class='fas fa-calendar-alt'></i></button></article>
+<!--         ÍCONE DATA -->
+            <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabHorario')">
+                <i class='fas fa-calendar-alt'></i></button>
 
 
-         <!-- ÍCONE RESUMO -->        
-           <article class="item"><button type="button" class="progress-navbar-buttom">
-            <i class='fas fa-check'></i></button></article>
-</arcticle>
+<!--         ÍCONE RESUMO -->        
+           <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabResumo')">
+            <i class='fas fa-check'></i></button>
+            
+        </arcticle>
 
-</div>
-
-
-    <div id="London" class="tabcontent">
-      <h3>London</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id pretium leo. Pellentesque luctus massa non elit viverra pellentesque. Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem. Vivamus vehicula dignissim augue et scelerisque. Etiam quam nisi, molestie ac dolor in, tincidunt tincidunt arcu. Praesent sed justo finibus, fringilla velit quis, porta erat. Donec blandit metus ut arcu iaculis iaculis. Cras nec dolor fringilla justo ullamcorper auctor. Aliquam eget pretium velit. Morbi urna justo, pulvinar id lobortis in, aliquet placerat orci.
-    Etiam nisi turpis, eleifend nec tellus id, efficitur pellentesque dolor. Proin vitae massa a augue sagittis vulputate. Duis vel fringilla magna, sit amet vestibulum enim. Fusce laoreet accumsan nisl eu sagittis. Morbi hendrerit sapien eget efficitur imperdiet. Aenean vitae nisl id est placerat congue a et nisi. Suspendisse vitae quam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse eu risus lacus. Ut tristique libero eget est dictum, commodo malesuada orci elementum. Proin molestie eu mi in tempus.
-    In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p>
     </div>
 
-    <div id="Paris" class="tabcontent">
-      <h3>Paris</h3>
-      <p>Paris is the capital of France.</p> 
+
+
+    <div id="tabUnidade" class="tabcontent">
+      <h2>Escolha uma unidade</h2>
+        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
     </div>
 
-    <div id="Tokyo" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
+    <div id="tabServico" class="tabcontent">
+      <h2>Escolha um serviço</h2>
+        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
     </div>
+
+    <div id="tabBarbeiro" class="tabcontent">
+      <h2>Escolha um barbeiro</h2>
+        <button type="button" class= "barbeiro" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+        
+        <button type="button" class= "barbeiro" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+    </div>
+    
+    <div id="tabHorario" class="tabcontent">
+      <h2>Escolha um horario</h2>
+        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+        
+        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+    </div>
+    
+    <div id="tabResumo" class="tabcontent">
+      <h2>Resumo</h2>
+        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+    </div>
+    
+</section>
 
 
 <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+    function navegacaoAgendamento(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+    document.getElementById("defaultOpen").click();
+    
 </script>
    
 </body>

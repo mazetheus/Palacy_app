@@ -28,91 +28,122 @@ body {
     background-color: $color-primary;
     border-radius: 0px 0px 30px 30px;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
+    
+    .img-logo{
+        display: flex;
+        margin: 0 auto;
+        height: 30vw;
+        width: auto;
+        padding: 2vw;
+    }
+    
+    .title-agendamento{
+        padding-left: 5vw;
+        text-align: center;
+        color: $color-secondary;
+        line-height: 5vh;
+        font-size: 5vw;
+        margin: 0px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 28px;
+    }
 }
 
-.img-logo{
+#agendar{
+    
     display: flex;
-    margin: 0 auto;
-    height: 30vw;
-    width: auto;
-    padding: 2vw;
-}
-
-.img-logo-min{
-    height: 20vw;
-    transition: height 0.7s;
-}
-
-.title-agendamento{
-    padding-left: 5vw;
-    text-align: center;
-    color: $color-secondary;
-    line-height: 3vw;
-    font-size: 5vw;
-    margin: 0px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 28px;
-}
-
-#progress-navbar{
-    padding: 3vh 0;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-}
-
-#progress-navbar i{
-    font-size: 5vw;
-    text-align: center;
-}
-
-.progress-navbar-buttom{
-    position: relative;
-    width: 12vw;
-    height: 12vw;
-    background: #9B9B9B;
-    border-radius: 10px;
-    color: $color-secondary;
-}
-
-.progress-navbar-buttom:focus {
-    background: $color-secondary;
-    color: #fff;
-}
-
-.progress-navbar-buttom-ok{
-    background: #698C5F;
+    align-items: center;
+    flex-direction: column;
+    
+    .fixed-top{
+        position: fixed;
+        backdrop-filter: blur(2px);
+    }
+    
+    .progress-navbar{
+        padding: 3vh 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        width: 100vw;
+        
+        
+        i{
+            font-size: 5vw;
+            text-align: center;
+        }
+        
+        button{
+            position: relative;
+            width: 12vw;
+            height: 12vw;
+            background: #9B9B9B;
+            border-radius: 10px;
+            color: $color-secondary;
+        }
+        
+        button:focus {
+            background: $color-secondary;
+            color: #fff;
+        }
+        
+        .done{
+            background: #698C5F;
+        }
+    }
+    
+    .tabcontent {
+        display: none;
+        margin-top: 30vh;
+        border-top: none;
+        text-align: justify;
+        font-family: 'Roboto';
+    }
+    
+    .unidade{
+        display: flex;
+        color: $color-primary;
+        background-color: $color-secondary;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: none;
+        width: 80vw;
+        margin-bottom: 1vh;
+    }
+    
+    #tabBarbeiro{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .barbeiro{
+        display: flex;
+        
+        color: $color-primary;
+        background-color: $color-secondary;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: none;
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 1vh;
+    }
+    
+    .info{
+        padding: 2vw 3vh;
+    }
+    
 }
  
-.progress-navbar-icon{
-    width: 25px;
-    height: auto;
-    align-content: center;
-}
-
-.progress-navbar-icon-dot{
-    font-size: 12vw;
-    margin: 0;
-    line-height: 0;
-    margin-top: 20px;
-    color: $color-secondary;
-    pointer-events: none
-}
-
-.toppart{
-    position: fixed;
-    width: 100vw;
-    background-color: #FFF;
-}
 
 iframe{
     position: relative;
     border: none;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: auto;
 }
 
@@ -125,30 +156,29 @@ iframe{
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
-}
+    
+    button {
+        position: relative;
+        background-color: inherit;
+        width: 62px;
+        height: 62px;
+        border-radius: 10px;
+        border: 0px;
+        line-height: 2.5vh;
+        font-size: 3vw;
+        text-align: center;
+        color: $color-primary;
+    }
+    
+    button.active {
+        background: #f2f2f2;
+        color: $color-secondary;
+        animation: slide-top-navbar 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
 
-.bottom-navbar button {
-    position: relative;
-    background-color: inherit;
-    width: 62px;
-    height: 62px;
-    border-radius: 10px;
-    border: 0px;
-    line-height: 3vw;
-    font-size: 1.8vw;
-    text-align: center;
-    color: $color-primary;
-}
-
-.bottom-navbar button.active {
-    background: #f2f2f2;
-    color: $color-secondary;
-    animation: slide-top-navbar 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.bottom-navbar-icon{
-    width: 4vw;
-    height: auto;
+    i{
+        font-size: 4vw;
+    }
 }
 
 #perfil{
@@ -156,24 +186,39 @@ iframe{
         display: flex;
         flex-wrap: nowrap;
     }
+    
     .top-navbar{ 
         flex-direction: column;
         align-items: center;
+        align-content: center;
         height: 85vh;
         font-family: 'Roboto'
     }
+    
     .img-logo{
-        width: 60vw;
+        width: 40vh;
         height: auto;
     }
+    
     h2{
-        padding: 8vw 10vw;
+        padding: 1vh 20vw 0 20vw;
+        line-height: 3vh;
     }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+    
     input{
+        display: flex;
         border: none;
         border-bottom: 0.5vw solid $color-secondary;
         background-color: inherit;
         text-align: center;
+        padding-top: 2vh;
     }
     
     .celular{
@@ -181,6 +226,7 @@ iframe{
         font-size: 5vw;
         color: $color-secondary;
     }
+    
     ::placeholder{
         color: $color-secondary;
         opacity: 0.8;
@@ -189,15 +235,18 @@ iframe{
     button{
         display: flex;
         border: none;
-        margin-top: 15vh;
-        align-items: center;
-        padding: 2vh 15vw 2vh 15vw;
-        margin-bottom: 5vh;
         background-color: $color-secondary;
         color: $color-primary;
-        border-radius: 30px;
-        font-size: 6vw;
+        border-radius: 60px;
+        font-size: 3vh;
+        padding: 2.5vh 20vw;
+        margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     }
+    
+
 }
 
 @keyframes slide-top-logoholder {
@@ -226,3 +275,22 @@ iframe{
     transform: translateZ(-400px) translateX(-200px);
   }
 }
+
+@-webkit-keyframes ping {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(2.2);
+            transform: scale(2.2);
+    opacity: 0;
+  }
+}
+

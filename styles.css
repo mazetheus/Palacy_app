@@ -25,25 +25,18 @@ body {
   border-radius: 0px 0px 30px 30px;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
 }
-
-.img-logo {
+#top-navbar .img-logo {
   display: flex;
   margin: 0 auto;
   height: 30vw;
   width: auto;
   padding: 2vw;
 }
-
-.img-logo-min {
-  height: 20vw;
-  transition: height 0.7s;
-}
-
-.title-agendamento {
+#top-navbar .title-agendamento {
   padding-left: 5vw;
   text-align: center;
   color: #2A0001;
-  line-height: 3vw;
+  line-height: 5vh;
   font-size: 5vw;
   margin: 0px;
   font-style: normal;
@@ -51,21 +44,29 @@ body {
   line-height: 28px;
 }
 
-#progress-navbar {
+#agendar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#agendar .fixed-top {
+  position: fixed;
+  backdrop-filter: blur(2px);
+}
+#agendar .progress-navbar {
   padding: 3vh 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
+  width: 100vw;
 }
-
-#progress-navbar i {
+#agendar .progress-navbar i {
   font-size: 5vw;
   text-align: center;
 }
-
-.progress-navbar-buttom {
+#agendar .progress-navbar button {
   position: relative;
   width: 12vw;
   height: 12vw;
@@ -73,42 +74,54 @@ body {
   border-radius: 10px;
   color: #2A0001;
 }
-
-.progress-navbar-buttom:focus {
+#agendar .progress-navbar button:focus {
   background: #2A0001;
   color: #fff;
 }
-
-.progress-navbar-buttom-ok {
+#agendar .progress-navbar .done {
   background: #698C5F;
 }
-
-.progress-navbar-icon {
-  width: 25px;
-  height: auto;
-  align-content: center;
+#agendar .tabcontent {
+  display: none;
+  margin-top: 30vh;
+  border-top: none;
+  text-align: justify;
+  font-family: "Roboto";
 }
-
-.progress-navbar-icon-dot {
-  font-size: 12vw;
-  margin: 0;
-  line-height: 0;
-  margin-top: 20px;
-  color: #2A0001;
-  pointer-events: none;
+#agendar .unidade {
+  display: flex;
+  color: #fff1d6;
+  background-color: #2A0001;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  width: 80vw;
+  margin-bottom: 1vh;
 }
-
-.toppart {
-  position: fixed;
-  width: 100vw;
-  background-color: #FFF;
+#agendar #tabBarbeiro {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#agendar .barbeiro {
+  display: flex;
+  color: #fff1d6;
+  background-color: #2A0001;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  width: 30vw;
+  height: 30vw;
+  margin-bottom: 1vh;
+}
+#agendar .info {
+  padding: 2vw 3vh;
 }
 
 iframe {
   position: relative;
   border: none;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: auto;
 }
 
@@ -121,29 +134,25 @@ iframe {
   flex-direction: row;
   justify-content: space-around;
 }
-
-.bottom-navbar button {
+#bottom-navbar button {
   position: relative;
   background-color: inherit;
   width: 62px;
   height: 62px;
   border-radius: 10px;
   border: 0px;
-  line-height: 3vw;
-  font-size: 1.8vw;
+  line-height: 2.5vh;
+  font-size: 3vw;
   text-align: center;
   color: #fff1d6;
 }
-
-.bottom-navbar button.active {
+#bottom-navbar button.active {
   background: #f2f2f2;
   color: #2A0001;
   animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-.bottom-navbar-icon {
-  width: 4vw;
-  height: auto;
+#bottom-navbar i {
+  font-size: 4vw;
 }
 
 #perfil .logo-holder {
@@ -153,21 +162,31 @@ iframe {
 #perfil .top-navbar {
   flex-direction: column;
   align-items: center;
+  align-content: center;
   height: 85vh;
   font-family: "Roboto";
 }
 #perfil .img-logo {
-  width: 60vw;
+  width: 40vh;
   height: auto;
 }
 #perfil h2 {
-  padding: 8vw 10vw;
+  padding: 1vh 20vw 0 20vw;
+  line-height: 3vh;
+}
+#perfil form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 #perfil input {
+  display: flex;
   border: none;
   border-bottom: 0.5vw solid #2A0001;
   background-color: inherit;
   text-align: center;
+  padding-top: 2vh;
 }
 #perfil .celular {
   margin-top: 2vh;
@@ -181,14 +200,15 @@ iframe {
 #perfil button {
   display: flex;
   border: none;
-  margin-top: 15vh;
-  align-items: center;
-  padding: 2vh 15vw 2vh 15vw;
-  margin-bottom: 5vh;
   background-color: #2A0001;
   color: #fff1d6;
-  border-radius: 30px;
-  font-size: 6vw;
+  border-radius: 60px;
+  font-size: 3vh;
+  padding: 2.5vh 20vw;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes slide-top-logoholder {
@@ -213,6 +233,23 @@ iframe {
   }
   100% {
     transform: translateZ(-400px) translateX(-200px);
+  }
+}
+@-webkit-keyframes ping {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(2.2);
+    transform: scale(2.2);
+    opacity: 0;
   }
 }
 
