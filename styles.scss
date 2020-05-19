@@ -5,6 +5,10 @@ $logoholder-animation-time: 0.7;
 body {
     margin: 0px;
     font-family: 'Roboto';
+    
+    input{
+        color: $color-secondary;
+    }
 }
 
 #container{
@@ -154,9 +158,10 @@ body {
             margin-bottom: 1vh;
             width: 100%;
             background-color: inherit;
-            border-bottom: 3px solid $color-primary;
+            border-bottom: 2px solid $color-primary;
             padding: 2vw 3vh;
         }
+        
         
         .barbeiro{
             p{
@@ -238,29 +243,33 @@ iframe{
     }
 }
 
-#perfil{
-    .logo-holder{
-        display: flex;
-        flex-wrap: nowrap;
-    }
+
+#perfil, #perfil-senha, #perfil-editar{
+    display: flex;
+    flex-wrap: nowrap;
     
     .top-navbar{ 
         flex-direction: column;
         align-items: center;
         align-content: center;
-        height: 85vh;
+        height: 90vh;
         font-family: 'Roboto';
+        border-radius: 0 0 60px 60px;
     }
     
     .img-logo{
-        width: 40vh;
+        width: 30vh;
         height: auto;
     }
     
     h2{
-        padding-top: 2vh;
-        line-height: 3vh;
+        font-size: 5vw;
+        color: $color-secondary;
+        padding-top: 1vh;
+        line-height: 5vw;
         text-align: center;
+        font-weight: normal;
+        margin: 0 15vw;
     }
     
     form{
@@ -273,7 +282,7 @@ iframe{
     input{
         display: flex;
         border: none;
-        border-bottom: 0.5vw solid $color-secondary;
+        border-bottom: 4px solid $color-secondary;
         background-color: inherit;
         text-align: center;
         padding-top: 2vh;
@@ -300,21 +309,71 @@ iframe{
         margin-top: 8vh;
         background-color: $color-secondary;
         color: $color-primary;
-        font-size: 3vh;
+        font-size: 5vw;
         padding: 2.5vh 20vw;
         border: none;
     }
-    
+
     .cancelar{
         margin-top: 2vh;
-        font-size: 2vh;
+        font-size: 4vw;
         padding: 2vh 8vw;
         color: $color-secondary;
         background-color: inherit;
         border: 4px solid $color-secondary;
     }
     
+    .progress-bar{
+
+        margin: 0.5vh auto 2vh auto;
+        width: 80%;
+        text-align: center;
+        line-height: 0;
+        font-size: 2vh;
+        pointer-events: none;
+        
+
+        hr{
+            width: 100%;
+            height: 0.5vh;
+            background-color: $color-secondary;
+            margin: 0.8vh -0.5vw 0 -0.5vw;
+            border: none;
+        }
+        
+    }
+    
 }
+
+#perfil-editar{
+    
+    h2{
+        font-size: 5vw;
+        color: $color-secondary;
+        padding-top: 1vh;
+        line-height: 0;
+        text-align: center;
+    }
+    
+    form {
+      padding-top: 1vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: nowrap;
+    }
+    input {
+        display: flex;
+        border: none;
+        border-bottom: 4px solid $color-secondary;
+        background-color: inherit;
+        text-align: center;
+        margin: 1vh 10vw 0 10vw;
+        font-size: 4vw;
+    }
+}
+
+
     
     /*CADASTRO*/
 #cadastro {
@@ -323,8 +382,9 @@ iframe{
         font-style: normal;
         color: $color-secondary;
         text-align: center;
-        margin: 2vh 20vw 5vh 20vw;
+        margin: 4vh 20vw 4vh 20vw;
         font-size: 4vw;
+        font-weight: normal;
     }
     
     form {
@@ -337,10 +397,10 @@ iframe{
     input {
         display: flex;
         border: none;
-        border-bottom: 0.5vw solid $color-secondary;
+        border-bottom: 0.4vw solid $color-secondary;
         background-color: inherit;
         text-align: center;
-        margin: 2vh 15vw 0 15vw;
+        margin: 1.5vh 15vw 0 15vw;
         font-size: 4vw;
     }
     
@@ -355,7 +415,7 @@ iframe{
       background-color: #2A0001;
       color: #fff1d6;
       border-radius: 60px;
-      font-size: 3vh;
+      font-size: 4vw;
       padding: 2.5vh 20vw;
       margin-top: 8vh;
       margin-left: auto;
@@ -363,21 +423,26 @@ iframe{
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     }
     
-    .cancelar{
-        border: 0.5vw solid $color-secondary;
-        font-size: 4vw;
-        background-color: inherit;
-        color: $color-secondary;
-        border-radius: 60px;
-        font-size: 3vh;
-        padding: 2vh 10vw;
-        margin-top: 2vh;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    }
 }
 
+.progress-bar{
+    color: $color-secondary;
+    display: flex;
+    margin: 2vh auto 0 auto;
+    width: 80%;
+    text-align: center;
+    line-height: 0;
+    font-size: 2vh;
+    pointer-events: none;
+    
+    hr{
+        width: 100%;
+        height: 0.5vh;
+        background-color: $color-secondary;
+        margin: 0.8vh -0.5vw 0 -0.5vw;
+        border: none;
+    }
+}
 
 /*HISTORICO*/
 #historico {
@@ -474,90 +539,8 @@ iframe{
         color: #FFF;
         position: relative;
     }
-    
-    button {
-        display: flex;
-        border: none;
-        background-color: #2A0001;
-        color: #fff1d6;
-        border-radius: 60px;
-        font-size: 3vh;
-        padding: 2.5vh 20vw;
-        margin-top: 10vh;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    }
 }
 
-/* EDITAR PEFIL*/
-
-#editarperfil{
-    display: flex;
-    flex-flow: column nowrap;
-    overflow: scroll;
-    
-    .top-navbar {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        height: 90vh;
-        font-family: "Roboto";
-    }
-
-    .img-logo {
-        width: 30vh;
-        height: auto;
-    }
-    h2 {
-      line-height: 3vh;
-      text-align: center;
-    }
-    form {
-      padding-top: 3vh;
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      flex-wrap: nowrap;
-    }
-    input {
-        display: flex;
-        border: none;
-        border-bottom: 0.5vw solid $color-secondary;
-        background-color: inherit;
-        text-align: center;
-        margin: 2vh 10vw 0 10vw;
-        font-size: 4vw;
-    }
-    
-    button {
-      display: flex;
-      border: none;
-      background-color: #2A0001;
-      color: #fff1d6;
-      border-radius: 60px;
-      font-size: 3vh;
-      padding: 2vh 20vw;
-      margin-top: 5vh;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    }
-    
-    .cancelar{
-        border: 0.5vw solid $color-secondary;
-        font-size: 4vw;
-        background-color: inherit;
-        color: $color-secondary;
-        border-radius: 60px;
-        font-size: 3vh;
-        padding: 1vh 10vw;
-        margin-top: 2vh;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    }
-}
 
 @keyframes slide-top-logoholder {
     0% {

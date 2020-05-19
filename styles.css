@@ -2,6 +2,9 @@ body {
   margin: 0px;
   font-family: "Roboto";
 }
+body input {
+  color: #2A0001;
+}
 
 #container {
   display: flex;
@@ -133,7 +136,7 @@ body {
   margin-bottom: 1vh;
   width: 100%;
   background-color: inherit;
-  border-bottom: 3px solid #fff1d6;
+  border-bottom: 2px solid #fff1d6;
   padding: 2vw 3vh;
 }
 #agendar .tabcontent .barbeiro p {
@@ -197,36 +200,41 @@ iframe {
   font-size: 4vw;
 }
 
-#perfil .logo-holder {
+#perfil, #perfil-senha, #perfil-editar {
   display: flex;
   flex-wrap: nowrap;
 }
-#perfil .top-navbar {
+#perfil .top-navbar, #perfil-senha .top-navbar, #perfil-editar .top-navbar {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  height: 85vh;
+  height: 90vh;
   font-family: "Roboto";
+  border-radius: 0 0 60px 60px;
 }
-#perfil .img-logo {
-  width: 40vh;
+#perfil .img-logo, #perfil-senha .img-logo, #perfil-editar .img-logo {
+  width: 30vh;
   height: auto;
 }
-#perfil h2 {
-  padding-top: 2vh;
-  line-height: 3vh;
+#perfil h2, #perfil-senha h2, #perfil-editar h2 {
+  font-size: 5vw;
+  color: #2A0001;
+  padding-top: 1vh;
+  line-height: 5vw;
   text-align: center;
+  font-weight: normal;
+  margin: 0 15vw;
 }
-#perfil form {
+#perfil form, #perfil-senha form, #perfil-editar form {
   display: flex;
   flex-direction: column;
   align-content: center;
   flex-wrap: nowrap;
 }
-#perfil input {
+#perfil input, #perfil-senha input, #perfil-editar input {
   display: flex;
   border: none;
-  border-bottom: 0.5vw solid #2A0001;
+  border-bottom: 4px solid #2A0001;
   background-color: inherit;
   text-align: center;
   padding-top: 2vh;
@@ -234,32 +242,71 @@ iframe {
   font-size: 5vw;
   color: #2A0001;
 }
-#perfil ::placeholder {
+#perfil ::placeholder, #perfil-senha ::placeholder, #perfil-editar ::placeholder {
   color: #2A0001;
   opacity: 0.8;
 }
-#perfil button {
+#perfil button, #perfil-senha button, #perfil-editar button {
   display: flex;
   border-radius: 60px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
-#perfil .continuar {
+#perfil .continuar, #perfil-senha .continuar, #perfil-editar .continuar {
   margin-top: 8vh;
   background-color: #2A0001;
   color: #fff1d6;
-  font-size: 3vh;
+  font-size: 5vw;
   padding: 2.5vh 20vw;
   border: none;
 }
-#perfil .cancelar {
+#perfil .cancelar, #perfil-senha .cancelar, #perfil-editar .cancelar {
   margin-top: 2vh;
-  font-size: 2vh;
+  font-size: 4vw;
   padding: 2vh 8vw;
   color: #2A0001;
   background-color: inherit;
   border: 4px solid #2A0001;
+}
+#perfil .progress-bar, #perfil-senha .progress-bar, #perfil-editar .progress-bar {
+  margin: 0.5vh auto 2vh auto;
+  width: 80%;
+  text-align: center;
+  line-height: 0;
+  font-size: 2vh;
+  pointer-events: none;
+}
+#perfil .progress-bar hr, #perfil-senha .progress-bar hr, #perfil-editar .progress-bar hr {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #2A0001;
+  margin: 0.8vh -0.5vw 0 -0.5vw;
+  border: none;
+}
+
+#perfil-editar h2 {
+  font-size: 5vw;
+  color: #2A0001;
+  padding-top: 1vh;
+  line-height: 0;
+  text-align: center;
+}
+#perfil-editar form {
+  padding-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+#perfil-editar input {
+  display: flex;
+  border: none;
+  border-bottom: 4px solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  margin: 1vh 10vw 0 10vw;
+  font-size: 4vw;
 }
 
 /*CADASTRO*/
@@ -267,8 +314,9 @@ iframe {
   font-style: normal;
   color: #2A0001;
   text-align: center;
-  margin: 2vh 20vw 5vh 20vw;
+  margin: 4vh 20vw 4vh 20vw;
   font-size: 4vw;
+  font-weight: normal;
 }
 #cadastro form {
   display: flex;
@@ -279,10 +327,10 @@ iframe {
 #cadastro input {
   display: flex;
   border: none;
-  border-bottom: 0.5vw solid #2A0001;
+  border-bottom: 0.4vw solid #2A0001;
   background-color: inherit;
   text-align: center;
-  margin: 2vh 15vw 0 15vw;
+  margin: 1.5vh 15vw 0 15vw;
   font-size: 4vw;
 }
 #cadastro ::placeholder {
@@ -295,25 +343,30 @@ iframe {
   background-color: #2A0001;
   color: #fff1d6;
   border-radius: 60px;
-  font-size: 3vh;
+  font-size: 4vw;
   padding: 2.5vh 20vw;
   margin-top: 8vh;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
-#cadastro .cancelar {
-  border: 0.5vw solid #2A0001;
-  font-size: 4vw;
-  background-color: inherit;
+
+.progress-bar {
   color: #2A0001;
-  border-radius: 60px;
-  font-size: 3vh;
-  padding: 2vh 10vw;
-  margin-top: 2vh;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin: 2vh auto 0 auto;
+  width: 80%;
+  text-align: center;
+  line-height: 0;
+  font-size: 2vh;
+  pointer-events: none;
+}
+.progress-bar hr {
+  width: 100%;
+  height: 0.5vh;
+  background-color: #2A0001;
+  margin: 0.8vh -0.5vw 0 -0.5vw;
+  border: none;
 }
 
 /*HISTORICO*/
@@ -400,83 +453,6 @@ iframe {
   background: #2A0001;
   color: #FFF;
   position: relative;
-}
-#perfilogado button {
-  display: flex;
-  border: none;
-  background-color: #2A0001;
-  color: #fff1d6;
-  border-radius: 60px;
-  font-size: 3vh;
-  padding: 2.5vh 20vw;
-  margin-top: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-}
-
-/* EDITAR PEFIL*/
-#editarperfil {
-  display: flex;
-  flex-flow: column nowrap;
-  overflow: scroll;
-}
-#editarperfil .top-navbar {
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  height: 90vh;
-  font-family: "Roboto";
-}
-#editarperfil .img-logo {
-  width: 30vh;
-  height: auto;
-}
-#editarperfil h2 {
-  line-height: 3vh;
-  text-align: center;
-}
-#editarperfil form {
-  padding-top: 3vh;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: nowrap;
-}
-#editarperfil input {
-  display: flex;
-  border: none;
-  border-bottom: 0.5vw solid #2A0001;
-  background-color: inherit;
-  text-align: center;
-  margin: 2vh 10vw 0 10vw;
-  font-size: 4vw;
-}
-#editarperfil button {
-  display: flex;
-  border: none;
-  background-color: #2A0001;
-  color: #fff1d6;
-  border-radius: 60px;
-  font-size: 3vh;
-  padding: 2vh 20vw;
-  margin-top: 5vh;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-}
-#editarperfil .cancelar {
-  border: 0.5vw solid #2A0001;
-  font-size: 4vw;
-  background-color: inherit;
-  color: #2A0001;
-  border-radius: 60px;
-  font-size: 3vh;
-  padding: 1vh 10vw;
-  margin-top: 2vh;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes slide-top-logoholder {
