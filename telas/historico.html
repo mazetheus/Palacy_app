@@ -1,13 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Histórico</title>
-    <div>
-        <h2>Histórico</h2>
-    </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
+
 <body>
+    <section id="historico">
+       <div class="fixed-top">
+ 
+            <arcticle id="top-navbar" class="top-navbar">
+                <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
+                <article><h2 class="title-aba"><br><strong>HISTORICO</strong></h2></article>    
+            </arcticle>
+
+            <arcticle class="progress-navbar">
+                 <!--ÍCONE EM ABERTO -->
+                   <button type="button" class="tablinks" onclick="navegacaoHistorico(event, 'tabAgendados')" id="defaultOpen">
+                    AGENDADO</button>
+                 <!--ÍCONE HISTORICO -->
+                   <button type="button" class="tablinks" onclick="navegacaoHistorico(event, 'tabHistorico')" id="defaultOpen">
+                       HISTORICO</button>    
+            </arcticle> 
+     </div>
+       
+        <!--ABA EM ABERTO -->
+        <div id="tabAgendados" class="tabcontent">
+             <div class="atendimento">
+                 <div class="infos">
+                     <i class='fas fa-map-marker-alt'> </i>PAMPULHA <br>
+                     <i class='fas fas fa-cut'></i>CORTE &nbsp; <i class='fas far fa-user'></i>CARLOS <br>
+                     <i class='fas fa-calendar-alt'></i>25/05/2020 15:30
+                 </div>
+                 <div class="avaliar">
+                    <p>AVALIE AGORA</p>
+                     <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                 </div>
+             </div>
+             
+             <div class="atendimento">
+                 <div class="infos">
+                     <i class='fas fa-map-marker-alt'> </i>PAMPULHA <br>
+                     <i class='fas fas fa-cut'></i>CORTE &nbsp; <i class='fas far fa-user'></i>CARLOS <br>
+                     <i class='fas fa-calendar-alt'></i>25/05/2020 15:30
+                 </div>
+                 <div class="avaliar">
+                    <p>AVALIE AGORA</p>
+                     <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                 </div>
+             </div>
+             
+             <div class="atendimento">
+                 <div class="infos">
+                     <i class='fas fa-map-marker-alt'> </i>PAMPULHA <br>
+                     <i class='fas fas fa-cut'></i>CORTE &nbsp; <i class='fas far fa-user'></i>CARLOS <br>
+                     <i class='fas fa-calendar-alt'></i>25/05/2020 15:30
+                 </div>
+                 <div class="avaliar">
+                    <p>AVALIE AGORA</p>
+                     <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                 </div>
+             </div>
+             
+        </div>    
+        <!-- ABA HISTORICO -->    
+        <div id="tabHistorico" class="tabcontent">
+             <div class="atendimento">
+                 <div class="infos">
+                     <i class='fas fa-map-marker-alt'> </i>PAMPULHA <br>
+                     <i class='fas fas fa-cut'></i>CORTE &nbsp; <i class='fas far fa-user'></i>CARLOS <br>
+                     <i class='fas fa-calendar-alt'></i>25/05/2020 15:30
+                 </div>
+                 <div class="avaliar">
+                    <p>AVALIE AGORA</p>
+                     <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                 </div>
+             </div>
+             
+             <div class="atendimento">
+                 <div class="infos">
+                     <i class='fas fa-map-marker-alt'> </i>PAMPULHA <br>
+                     <i class='fas fas fa-cut'></i>CORTE &nbsp; <i class='fas far fa-user'></i>CARLOS <br>
+                     <i class='fas fa-calendar-alt'></i>25/05/2020 15:30
+                 </div>
+                 <div class="avaliar">
+                     <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                 </div>
+             </div>
+             
+        </div>     
+    </section>
     
+<script>
+    function navegacaoHistorico(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            
+        }
+        tablinks = document.getElementsByClassName("tablinks");    
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove('active');
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.classList.add('active');
+    }
+    document.getElementById("defaultOpen").click();
+</script>
 </body>
-</html>
+</html> 
