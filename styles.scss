@@ -28,26 +28,58 @@ body {
     background-color: $color-primary;
     border-radius: 0px 0px 30px 30px;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
-    
+        
     .img-logo{
         display: flex;
         margin: 0 auto;
         height: 30vw;
         width: auto;
         padding: 2vw;
+        
+        transition: height 1s;
     }
     
-    .title-agendamento{
-        padding-left: 5vw;
+    .title-aba{
         text-align: center;
         color: $color-secondary;
         line-height: 5vh;
-        font-size: 5vw;
-        margin: 0px;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 28px;
+        font-size: 7vw;
+        margin: 0 0;
+        line-height: 0;
+        font-weight: bold;
+        
+        transition: font-size 1s;
     }
+    
+}
+
+.top-navbar-big{
+    text-align: center;
+    flex-direction: column !important;
+    .img-logo{
+            height: 60vw !important;
+        }
+}
+
+.title-aba-big{
+    margin-bottom: 3vh !important;
+    font-size: 5vw !important;
+    line-height: 28px !important;
+    font-weight: normal !important;
+}
+
+.tabcontent {
+        display: none;
+        margin-top: 60%;
+        border-top: none;
+        text-align: justify;
+        font-family: 'Roboto';
+    
+        transition: margin-top 1s;
+}
+
+.small{
+        margin-top: 110% !important;
 }
 
 #agendar{
@@ -85,55 +117,81 @@ body {
             color: $color-secondary;
         }
         
-        button:focus {
+        button.active{
             background: $color-secondary;
             color: #fff;
         }
         
-        .done{
-            background: #698C5F;
+        
+        .dot{
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 1.5vw;
+            color: $color-secondary;
+        }
+        
+        .inactive{
+            pointer-events: none;
+        }   
+    }
+    
+    .tabcontent{
+        background: $color-secondary;
+        color: $color-primary;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 80%;
+        
+        h2{
+            font-size: 6vw;
+            margin-left: 5vw;
+        }
+        
+        button{
+            display: flex;
+            border: none;
+            margin-bottom: 1vh;
+            width: 100%;
+            background-color: inherit;
+            border-bottom: 3px solid $color-primary;
+            padding: 2vw 3vh;
+        }
+        
+        .barbeiro{
+
+            
+            p{
+                text-align: left;
+                font-size: 4vw;
+                margin-top: 3vw;
+                margin-left: 5vw;
+                line-height: 4vw;
+            }
+            
+            img{
+                border-radius: 50%;
+                width: 15vw;
+                height: auto;
+                border: 2px solid $color-primary;
+            }
+            
+            i{
+                color: #FFD075;
+                font-size: 3vw;
+            }
         }
     }
     
-    .tabcontent {
-        display: none;
-        margin-top: 30vh;
-        border-top: none;
-        text-align: justify;
-        font-family: 'Roboto';
-    }
-    
-    .unidade{
-        display: flex;
-        color: $color-primary;
-        background-color: $color-secondary;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        border: none;
-        width: 80vw;
-        margin-bottom: 1vh;
-    }
-    
-    #tabBarbeiro{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .barbeiro{
-        display: flex;
-        
-        color: $color-primary;
-        background-color: $color-secondary;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        border: none;
-        width: 30vw;
-        height: 30vw;
-        margin-bottom: 1vh;
-    }
+    .done{
+        background-color: #698C5F !important;
+        transition: background-color 0.7s;
+        -webkit-animation: blink 0.7s both;
+	        animation: blink 0.7s both;
+     }
+
     
     .info{
-        padding: 2vw 3vh;
+        
     }
     
 }
@@ -160,8 +218,8 @@ iframe{
     button {
         position: relative;
         background-color: inherit;
-        width: 62px;
-        height: 62px;
+        width: 20vw;
+        height: 20vw;;
         border-radius: 10px;
         border: 0px;
         line-height: 2.5vh;
@@ -192,7 +250,7 @@ iframe{
         align-items: center;
         align-content: center;
         height: 85vh;
-        font-family: 'Roboto'
+        font-family: 'Roboto';
     }
     
     .img-logo{
@@ -201,8 +259,9 @@ iframe{
     }
     
     h2{
-        padding: 1vh 20vw 0 20vw;
+        padding-top: 2vh;
         line-height: 3vh;
+        text-align: center;
     }
     
     form{
@@ -219,13 +278,11 @@ iframe{
         background-color: inherit;
         text-align: center;
         padding-top: 2vh;
-    }
-    
-    .celular{
         margin-top: 2vh;
         font-size: 5vw;
         color: $color-secondary;
     }
+    
     
     ::placeholder{
         color: $color-secondary;
@@ -234,9 +291,196 @@ iframe{
     
     button{
         display: flex;
-        border: none;
+        border-radius: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .continuar{
+        margin-top: 8vh;
         background-color: $color-secondary;
         color: $color-primary;
+        font-size: 3vh;
+        padding: 2.5vh 20vw;
+        border: none;
+    }
+    
+    .cancelar{
+        margin-top: 2vh;
+        font-size: 2vh;
+        padding: 2vh 8vw;
+        color: $color-secondary;
+        background-color: inherit;
+        border: 4px solid $color-secondary;
+    }
+    
+}
+    
+    /*CADASTRO*/
+#cadastro {
+    
+    h3{
+        font-style: normal;
+        color: $color-secondary;
+        text-align: center;
+        margin: 2vh 20vw 5vh 20vw;
+        font-size: 4vw;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+    
+    input {
+        display: flex;
+        border: none;
+        border-bottom: 0.5vw solid $color-secondary;
+        background-color: inherit;
+        text-align: center;
+        margin: 2vh 15vw 0 15vw;
+        font-size: 4vw;
+    }
+    
+    ::placeholder {
+      color: $color-secondary;
+      opacity: 0.5;
+    }
+    
+    button {
+      display: flex;
+      border: none;
+      background-color: #2A0001;
+      color: #fff1d6;
+      border-radius: 60px;
+      font-size: 3vh;
+      padding: 2.5vh 20vw;
+      margin-top: 8vh;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .cancelar{
+        border: 0.5vw solid $color-secondary;
+        font-size: 4vw;
+        background-color: inherit;
+        color: $color-secondary;
+        border-radius: 60px;
+        font-size: 3vh;
+        padding: 2vh 10vw;
+        margin-top: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+}
+
+
+/*HISTORICO*/
+#historico {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+    
+    .fixed-top {
+        position: fixed;
+        backdrop-filter: blur(2px);
+    }
+    .progress-navbar {
+        padding: 3vh 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        width: 100vw;
+    }
+    .progress-navbar i {
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .progress-navbar button {
+        position: center;
+        width: 20vw;
+        height: 12vw;
+        background: #9B9B9B;
+        border-radius: 10px;
+        color: #2A0001;
+    }
+    
+    .progress-navbar button:focus {
+        background: #2A0001;
+        color: #fff;
+    }
+    
+    .progress-navbar .done {
+        background: #698C5F;
+    }
+    
+    .tabcontent {
+        display: none;
+        margin-top: 50vh;
+        border-top: none;
+        text-align: justify;
+        font-family: "Roboto";
+    }
+    
+    .aba {
+        display: flex;
+        color: #fff1d6;
+        background-color: #2A0001;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: none;
+        width: 80vw;
+        margin-bottom: 20vh;
+    }
+    
+    .aba2 {
+        display: flex;
+        color: #fff1d6;
+        background-color: #2A0001;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: none;
+        width: 80vw;
+        margin-bottom: 20vh;
+    }
+    
+    p.boxmodel1 {
+        width: 300px;
+        height: 50px;
+        background: #2A0001;
+        color: #FFF;
+    }
+}
+
+
+/* PERFIL LOGADO */
+#perfilogado{
+    .progress-navbar {
+        padding: 3vh 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    p.boxmodel1 {   
+        width: 250px;
+        height: 250px;
+        background: #2A0001;
+        color: #FFF;
+        position: relative;
+    }
+    
+    button {
+        display: flex;
+        border: none;
+        background-color: #2A0001;
+        color: #fff1d6;
         border-radius: 60px;
         font-size: 3vh;
         padding: 2.5vh 20vw;
@@ -245,8 +489,75 @@ iframe{
         margin-right: auto;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     }
-    
+}
 
+/* EDITAR PEFIL*/
+
+#editarperfil{
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: scroll;
+    
+    .top-navbar {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        height: 90vh;
+        font-family: "Roboto";
+    }
+
+    .img-logo {
+        width: 30vh;
+        height: auto;
+    }
+    h2 {
+      line-height: 3vh;
+      text-align: center;
+    }
+    form {
+      padding-top: 3vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: nowrap;
+    }
+    input {
+        display: flex;
+        border: none;
+        border-bottom: 0.5vw solid $color-secondary;
+        background-color: inherit;
+        text-align: center;
+        margin: 2vh 10vw 0 10vw;
+        font-size: 4vw;
+    }
+    
+    button {
+      display: flex;
+      border: none;
+      background-color: #2A0001;
+      color: #fff1d6;
+      border-radius: 60px;
+      font-size: 3vh;
+      padding: 2vh 20vw;
+      margin-top: 5vh;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .cancelar{
+        border: 0.5vw solid $color-secondary;
+        font-size: 4vw;
+        background-color: inherit;
+        color: $color-secondary;
+        border-radius: 60px;
+        font-size: 3vh;
+        padding: 1vh 10vw;
+        margin-top: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
 }
 
 @keyframes slide-top-logoholder {
@@ -293,4 +604,27 @@ iframe{
     opacity: 0;
   }
 }
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+    
 

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
 
 <style>
 
@@ -16,37 +17,41 @@
 
     <section id="agendar">
        <div class="fixed-top">
-        <article id="logoholder" class="item-container">
-            <arcticle id="top-navbar" class="top-navbar">
-                <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
-                <article><h2 id="h2-agendamento" class="title-agendamento">FAÇA AGORA O SEU <br><strong>AGENDAMENTO</strong></h2></article>    
-            </arcticle>
+ 
+        <arcticle id="top-navbar" class="top-navbar-big">
+            <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
+            <h2 id="title-aba" class="title-aba title-aba-big">FAÇA AGORA O SEU <br><strong>AGENDAMENTO</strong></h2>   
+        </arcticle>
 
-        </article>
 
     <arcticle class="progress-navbar">
 
 <!--         ÍCONE UNIDADE -->
-           <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabUnidade')" id="defaultOpen">
+           <button id="buttonUnidade" type="button" class=" active" onclick="navegacaoAgendamento(event, 'tabUnidade')">
             <i class='fas fa-map-marker-alt'></i></button>
+            
+            <i class="fas fa-circle dot"></i>
 
 <!--         ÍCONE SERVIÇO   -->
-           <button type="button tablinks" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabServico')">
+           <button id="buttonServico" type="button tablinks" class="inactive" onclick="navegacaoAgendamento(event, 'tabServico')">
            <i class='fas fas fa-cut'></i></button>
+           
+           <i class="fas fa-circle dot"></i>
 
 <!--         ÍCONE BARBEIRO -->        
-           
-           <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabBarbeiro')">
+           <button id="buttonBarbeiro" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabBarbeiro')">
             <i class='fas far fa-user'></i></button>
-
+            
+            <i class="fas fa-circle dot"></i>
 
 <!--         ÍCONE DATA -->
-            <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabHorario')">
+            <button id="buttonHorario" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabHorario')">
                 <i class='fas fa-calendar-alt'></i></button>
-
+                
+                <i class="fas fa-circle dot"></i>
 
 <!--         ÍCONE RESUMO -->        
-           <button type="button" class="progress-navbar-buttom" onclick="navegacaoAgendamento(event, 'tabResumo')">
+           <button id="buttonResumo" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabResumo')">
             <i class='fas fa-check'></i></button>
             
         </arcticle>
@@ -55,33 +60,75 @@
 
 
 
-    <div id="tabUnidade" class="tabcontent">
-      <h2>Escolha uma unidade</h2>
-        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+    <div id="tabUnidade" class="tabcontent small" onclick="upUp()">
+      <h2>Escolha uma <strong>unidade</strong></h2>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico')"><div class="info"><h3>PAMPULHA</h3></div></button>
     </div>
 
     <div id="tabServico" class="tabcontent">
-      <h2>Escolha um serviço</h2>
-        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+      <h2>Escolha um <strong>serviço</strong></h2>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonServico', 'buttonBarbeiro')"><div class="info"><h3>BARBA</h3></div></button>
     </div>
 
     <div id="tabBarbeiro" class="tabcontent">
-      <h2>Escolha um barbeiro</h2>
-        <button type="button" class= "barbeiro" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+      <h2>Escolha um <strong>barbeiro</strong></h2>
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <img src="../src/barbeiro1.jpg">
+            <p div="name"><strong>CARLOS</strong> ALENCAR<br><br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            </p>
+            </button>
         
-        <button type="button" class= "barbeiro" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <img src="../src/barbeiro1.jpg">
+            <p div="name"><strong>MARCOS</strong> PEREIRA<br><br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            </p>
+            </button>
+        
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <img src="../src/barbeiro1.jpg">
+            <p div="name"><strong>BRASIL</strong> WASHINGTON<br><br>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            </p>
+            </button>
+        
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <img src="../src/barbeiro1.jpg">
+            <p div="name"><strong>JOSÉ</strong> OLIVEIRA<br><br>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            </p>
+            </button>
     </div>
     
     <div id="tabHorario" class="tabcontent">
-      <h2>Escolha um horario</h2>
-        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+      <h2>Escolha um <strong>horario</strong></h2>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonHorario', 'buttonResumo')"><div class="info"><h3>PAMPULHA</h3></div></button>
         
-        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+        <input type="text" class="form-control" id="exemplo" >
+        
+        
     </div>
     
     <div id="tabResumo" class="tabcontent">
-      <h2>Resumo</h2>
-        <button type="button" class= "unidade" onclick="alert('This button does nothing.')"><div class="info"><h3>PAMPULHA</h3></div></button>
+      <h2><strong>Resumo</strong></h2>
+        <button type="button" class= "unidade" onclick=""><div class="info"><h3>PAMPULHA</h3></div></button>
     </div>
     
 </section>
@@ -101,11 +148,47 @@
         }
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
-    }
+    };
 
-    document.getElementById("defaultOpen").click();
+    document.getElementById("buttonUnidade").click();
+    
+    <!-- Avança os ícones do menu deixando o de trás verde -->
+    function progressao(evt, thisTab, nextTab) {
+        document.getElementById(thisTab).classList.add('done');
+        
+        document.getElementById(nextTab).classList.remove('inactive');
+            
+           
+        evt.currentTarget.className += " done";
+        
+        document.getElementById(nextTab).click();
+    };
+    
+    <!-- Sobe a aba na página inicial--> 
+    function upUp(){
+        var element = document.getElementById("top-navbar");
+        element.classList.remove('top-navbar-big');
+        
+         var element = document.getElementById("tabUnidade");
+        element.classList.remove('small');
+        
+        
+         var element =document.getElementById("title-aba");
+        element.innerHTML = "AGENDAMENTO";
+        element.classList.remove('title-aba-big');
+    };
+    
+   
     
 </script>
+  
+   <script type="text/javascript">
+			$('#exemplo').datepicker({	
+				format: "dd/mm/yyyy",	
+				language: "pt-BR",
+				startDate: '+0d',
+			});
+		</script>
    
 </body>
 </html> 

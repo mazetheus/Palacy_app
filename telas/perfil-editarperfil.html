@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+</head>
+
+<body>
+   
+    <div id="editarperfil">
+            <arcticle id="top-navbar" class="top-navbar">
+                <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
+                
+                <article><h2 id="h2-agendamento" class="title-agendamento"><strong>EDITAR INFORMAÇÕES</strong></h2>
+                </article>
+                
+                <!-- FORMULÁRIOS DE AJUSTE DE CADASTRO -->
+                <form action="/action_page.php">
+                     <input type="text" class="form-control celular" placeholder="NOME" id="nome" name="telefone" required oninvalid="setCustomValidity('Digite seu Nome')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                     <input type="text" class="form-control celular" placeholder="SOBRENOME" id="sobrenome" name="nome" required oninvalid="setCustomValidity('Digite seu Sobrenome')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                     <input type="text" class="form-control celular" placeholder="E-MAIL" id="email" name="email" required oninvalid="setCustomValidity('Digite seu e-mail')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                     <input type="text" class="form-control celular" placeholder="SENHA" id="senha" name="telefone" required oninvalid="setCustomValidity('Digite a senha')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                     <input type="text" class="form-control celular" placeholder="CONFRIME A SENHA" id="senha2" name="telefone" required oninvalid="setCustomValidity('Digite a senha novamente')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                     
+                     <!--BOTAO CADASTRAR -->
+                    <button type="submit" class="continuar" value="Submit"><strong>CADASTRAR</strong></button>
+                    <!--BOTAO CANCELAR -->
+                    <button type="submit" class="cancelar" value="Submit"><strong>CANCELAR</strong></button>
+            </form>
+            
+        </arcticle>
+               
+    </div>
+</body>
+</html>

@@ -31,17 +31,45 @@ body {
   height: 30vw;
   width: auto;
   padding: 2vw;
+  transition: height 1s;
 }
-#top-navbar .title-agendamento {
-  padding-left: 5vw;
+#top-navbar .title-aba {
   text-align: center;
   color: #2A0001;
   line-height: 5vh;
-  font-size: 5vw;
-  margin: 0px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 28px;
+  font-size: 7vw;
+  margin: 0 0;
+  line-height: 0;
+  font-weight: bold;
+  transition: font-size 1s;
+}
+
+.top-navbar-big {
+  text-align: center;
+  flex-direction: column !important;
+}
+.top-navbar-big .img-logo {
+  height: 60vw !important;
+}
+
+.title-aba-big {
+  margin-bottom: 3vh !important;
+  font-size: 5vw !important;
+  line-height: 28px !important;
+  font-weight: normal !important;
+}
+
+.tabcontent {
+  display: none;
+  margin-top: 60%;
+  border-top: none;
+  text-align: justify;
+  font-family: "Roboto";
+  transition: margin-top 1s;
+}
+
+.small {
+  margin-top: 110% !important;
 }
 
 #agendar {
@@ -74,49 +102,62 @@ body {
   border-radius: 10px;
   color: #2A0001;
 }
-#agendar .progress-navbar button:focus {
+#agendar .progress-navbar button.active {
   background: #2A0001;
   color: #fff;
 }
-#agendar .progress-navbar .done {
-  background: #698C5F;
+#agendar .progress-navbar .dot {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.5vw;
+  color: #2A0001;
+}
+#agendar .progress-navbar .inactive {
+  pointer-events: none;
 }
 #agendar .tabcontent {
-  display: none;
-  margin-top: 30vh;
-  border-top: none;
-  text-align: justify;
-  font-family: "Roboto";
-}
-#agendar .unidade {
-  display: flex;
+  background: #2A0001;
   color: #fff1d6;
-  background-color: #2A0001;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  border: none;
-  width: 80vw;
-  margin-bottom: 1vh;
+  width: 80%;
 }
-#agendar #tabBarbeiro {
-  flex-direction: row;
-  flex-wrap: wrap;
+#agendar .tabcontent h2 {
+  font-size: 6vw;
+  margin-left: 5vw;
 }
-#agendar .barbeiro {
+#agendar .tabcontent button {
   display: flex;
-  color: #fff1d6;
-  background-color: #2A0001;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
   border: none;
-  width: 30vw;
-  height: 30vw;
   margin-bottom: 1vh;
-}
-#agendar .info {
+  width: 100%;
+  background-color: inherit;
+  border-bottom: 3px solid #fff1d6;
   padding: 2vw 3vh;
 }
-
+#agendar .tabcontent .barbeiro p {
+  text-align: left;
+  font-size: 4vw;
+  margin-top: 3vw;
+  margin-left: 5vw;
+  line-height: 4vw;
+}
+#agendar .tabcontent .barbeiro img {
+  border-radius: 50%;
+  width: 15vw;
+  height: auto;
+  border: 2px solid #fff1d6;
+}
+#agendar .tabcontent .barbeiro i {
+  color: #FFD075;
+  font-size: 3vw;
+}
+#agendar .done {
+  background-color: #698C5F !important;
+  transition: background-color 0.7s;
+  -webkit-animation: blink 0.7s both;
+  animation: blink 0.7s both;
+}
 iframe {
   position: relative;
   border: none;
@@ -137,8 +178,8 @@ iframe {
 #bottom-navbar button {
   position: relative;
   background-color: inherit;
-  width: 62px;
-  height: 62px;
+  width: 20vw;
+  height: 20vw;
   border-radius: 10px;
   border: 0px;
   line-height: 2.5vh;
@@ -171,8 +212,9 @@ iframe {
   height: auto;
 }
 #perfil h2 {
-  padding: 1vh 20vw 0 20vw;
+  padding-top: 2vh;
   line-height: 3vh;
+  text-align: center;
 }
 #perfil form {
   display: flex;
@@ -187,8 +229,6 @@ iframe {
   background-color: inherit;
   text-align: center;
   padding-top: 2vh;
-}
-#perfil .celular {
   margin-top: 2vh;
   font-size: 5vw;
   color: #2A0001;
@@ -199,6 +239,169 @@ iframe {
 }
 #perfil button {
   display: flex;
+  border-radius: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#perfil .continuar {
+  margin-top: 8vh;
+  background-color: #2A0001;
+  color: #fff1d6;
+  font-size: 3vh;
+  padding: 2.5vh 20vw;
+  border: none;
+}
+#perfil .cancelar {
+  margin-top: 2vh;
+  font-size: 2vh;
+  padding: 2vh 8vw;
+  color: #2A0001;
+  background-color: inherit;
+  border: 4px solid #2A0001;
+}
+
+/*CADASTRO*/
+#cadastro h3 {
+  font-style: normal;
+  color: #2A0001;
+  text-align: center;
+  margin: 2vh 20vw 5vh 20vw;
+  font-size: 4vw;
+}
+#cadastro form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+#cadastro input {
+  display: flex;
+  border: none;
+  border-bottom: 0.5vw solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  margin: 2vh 15vw 0 15vw;
+  font-size: 4vw;
+}
+#cadastro ::placeholder {
+  color: #2A0001;
+  opacity: 0.5;
+}
+#cadastro button {
+  display: flex;
+  border: none;
+  background-color: #2A0001;
+  color: #fff1d6;
+  border-radius: 60px;
+  font-size: 3vh;
+  padding: 2.5vh 20vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#cadastro .cancelar {
+  border: 0.5vw solid #2A0001;
+  font-size: 4vw;
+  background-color: inherit;
+  color: #2A0001;
+  border-radius: 60px;
+  font-size: 3vh;
+  padding: 2vh 10vw;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+/*HISTORICO*/
+#historico {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#historico .fixed-top {
+  position: fixed;
+  backdrop-filter: blur(2px);
+}
+#historico .progress-navbar {
+  padding: 3vh 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  width: 100vw;
+}
+#historico .progress-navbar i {
+  font-size: 5vw;
+  text-align: center;
+}
+#historico .progress-navbar button {
+  position: center;
+  width: 20vw;
+  height: 12vw;
+  background: #9B9B9B;
+  border-radius: 10px;
+  color: #2A0001;
+}
+#historico .progress-navbar button:focus {
+  background: #2A0001;
+  color: #fff;
+}
+#historico .progress-navbar .done {
+  background: #698C5F;
+}
+#historico .tabcontent {
+  display: none;
+  margin-top: 50vh;
+  border-top: none;
+  text-align: justify;
+  font-family: "Roboto";
+}
+#historico .aba {
+  display: flex;
+  color: #fff1d6;
+  background-color: #2A0001;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  width: 80vw;
+  margin-bottom: 20vh;
+}
+#historico .aba2 {
+  display: flex;
+  color: #fff1d6;
+  background-color: #2A0001;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  width: 80vw;
+  margin-bottom: 20vh;
+}
+#historico p.boxmodel1 {
+  width: 300px;
+  height: 50px;
+  background: #2A0001;
+  color: #FFF;
+}
+
+/* PERFIL LOGADO */
+#perfilogado .progress-navbar {
+  padding: 3vh 0;
+  display: flex;
+  justify-content: space-around;
+}
+#perfilogado p.boxmodel1 {
+  width: 250px;
+  height: 250px;
+  background: #2A0001;
+  color: #FFF;
+  position: relative;
+}
+#perfilogado button {
+  display: flex;
   border: none;
   background-color: #2A0001;
   color: #fff1d6;
@@ -206,6 +409,70 @@ iframe {
   font-size: 3vh;
   padding: 2.5vh 20vw;
   margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* EDITAR PEFIL*/
+#editarperfil {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: scroll;
+}
+#editarperfil .top-navbar {
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 90vh;
+  font-family: "Roboto";
+}
+#editarperfil .img-logo {
+  width: 30vh;
+  height: auto;
+}
+#editarperfil h2 {
+  line-height: 3vh;
+  text-align: center;
+}
+#editarperfil form {
+  padding-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+#editarperfil input {
+  display: flex;
+  border: none;
+  border-bottom: 0.5vw solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  margin: 2vh 10vw 0 10vw;
+  font-size: 4vw;
+}
+#editarperfil button {
+  display: flex;
+  border: none;
+  background-color: #2A0001;
+  color: #fff1d6;
+  border-radius: 60px;
+  font-size: 3vh;
+  padding: 2vh 20vw;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#editarperfil .cancelar {
+  border: 0.5vw solid #2A0001;
+  font-size: 4vw;
+  background-color: inherit;
+  color: #2A0001;
+  border-radius: 60px;
+  font-size: 3vh;
+  padding: 1vh 10vw;
+  margin-top: 2vh;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
@@ -250,6 +517,28 @@ iframe {
     -webkit-transform: scale(2.2);
     transform: scale(2.2);
     opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
