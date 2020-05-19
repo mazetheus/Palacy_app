@@ -62,17 +62,19 @@
 
     <div id="tabUnidade" class="tabcontent small" onclick="upUp()">
       <h2>Escolha uma <strong>unidade</strong></h2>
-        <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico')"><div class="info"><h3>PAMPULHA</h3></div></button>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico', 'unidade')"><h3>PAMPULHA</h3></button>
+        
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico', 'unidade')"><h3>RUA 2</h3></button>
     </div>
 
     <div id="tabServico" class="tabcontent">
       <h2>Escolha um <strong>serviço</strong></h2>
-        <button type="button" class= "unidade" onclick="progressao(event, 'buttonServico', 'buttonBarbeiro')"><div class="info"><h3>BARBA</h3></div></button>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonServico', 'buttonBarbeiro', 'servico')"><h3>BARBA</h3></button>
     </div>
 
     <div id="tabBarbeiro" class="tabcontent">
       <h2>Escolha um <strong>barbeiro</strong></h2>
-        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario', 'barbeiro')">
         <img src="../src/barbeiro1.jpg">
             <p div="name"><strong>CARLOS</strong> ALENCAR<br><br>
             <i class="fas fa-star"></i>
@@ -83,7 +85,7 @@
             </p>
             </button>
         
-        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario', 'barbeiro')">
         <img src="../src/barbeiro1.jpg">
             <p div="name"><strong>MARCOS</strong> PEREIRA<br><br>
             <i class="fas fa-star"></i>
@@ -94,7 +96,7 @@
             </p>
             </button>
         
-        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario', 'barbeiro')">
         <img src="../src/barbeiro1.jpg">
             <p div="name"><strong>BRASIL</strong> WASHINGTON<br><br>
             <i class="fas fa-star"></i>
@@ -105,7 +107,7 @@
             </p>
             </button>
         
-        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario')">
+        <button type="button" class= "barbeiro" onclick="progressao(event, 'buttonBarbeiro', 'buttonHorario', 'barbeiro')">
         <img src="../src/barbeiro1.jpg">
             <p div="name"><strong>JOSÉ</strong> OLIVEIRA<br><br>
             <i class="fas fa-star"></i>
@@ -119,7 +121,7 @@
     
     <div id="tabHorario" class="tabcontent">
       <h2>Escolha um <strong>horario</strong></h2>
-        <button type="button" class= "unidade" onclick="progressao(event, 'buttonHorario', 'buttonResumo')"><div class="info"><h3>PAMPULHA</h3></div></button>
+        <button type="date" class= "unidade" onclick="progressao(event, 'buttonHorario', 'buttonResumo')"><div class="info"><h3>PAMPULHA</h3></div></button>
         
         <input type="text" class="form-control" id="exemplo" >
         
@@ -153,7 +155,12 @@
     document.getElementById("buttonUnidade").click();
     
     <!-- Avança os ícones do menu deixando o de trás verde -->
-    function progressao(evt, thisTab, nextTab) {
+    function progressao(evt, thisTab, nextTab, tabName) {
+        var i, tabcontent;
+        tabcontent = document.getElementsByClassName(tabName);
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove('done');
+        }
         document.getElementById(thisTab).classList.add('done');
         
         document.getElementById(nextTab).classList.remove('inactive');

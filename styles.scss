@@ -148,6 +148,7 @@ body {
         }
         
         button{
+            color: $color-primary;
             display: flex;
             border: none;
             margin-bottom: 1vh;
@@ -158,8 +159,6 @@ body {
         }
         
         .barbeiro{
-
-            
             p{
                 text-align: left;
                 font-size: 4vw;

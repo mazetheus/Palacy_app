@@ -127,6 +127,7 @@ body {
   margin-left: 5vw;
 }
 #agendar .tabcontent button {
+  color: #fff1d6;
   display: flex;
   border: none;
   margin-bottom: 1vh;
