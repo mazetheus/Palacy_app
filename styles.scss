@@ -175,19 +175,20 @@ body {
         .fa-caret-up{
             display: block;
         }
-     }
+    }
     
 
     .tabcontent{
         background: $color-secondary;
         color: $color-primary;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
+        border-radius: 20px;
         width: 80%;
+        padding-bottom: 2vh;
         
         h2{
             font-size: 6vw;
-            margin-left: 5vw;
+            text-align: center;
         }
         
         button{
@@ -204,6 +205,7 @@ body {
         .resumo{
             display: flex;
             flex-direction: column;
+            padding-bottom: 2vh;
             
             .line{
                 display: flex;
@@ -229,7 +231,8 @@ body {
         button{
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 90%;
+            margin: 0 auto;
         }
         h3{
             margin-bottom: 1.5vh;
@@ -249,6 +252,8 @@ body {
             align-itens: center;
             font-family: 'Roboto' !important;
             width: 100%;
+            width: 90%;
+            margin: 0 auto;
         }
         .coluna{
             display: flex;
@@ -271,6 +276,10 @@ body {
     
     #tabBarbeiro{
         .barbeiro{
+            
+            width: 90%;
+            margin: 0 auto;
+            
             p{
                 text-align: left;
                 font-size: 4vw;
@@ -308,14 +317,14 @@ body {
         .tabBg{
             background-color: $color-secondary !important;
             margin-top: 0;
-            border-radius: 10px;
+            border-radius: 20px;
              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
         }
         .horarios{
             overflow: hidden;
             margin: 0 4vw;
             background: $color-primary !important;
-            border-radius: 0 0 10px 10px;
+            border-radius: 0 0 20px 20px;
              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
             
             h2{
@@ -336,7 +345,7 @@ body {
             padding: 1vh 4vw;
             background: $color-secondary;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
+            border-radius: 20px;
             border: none;
             font-family: 'Roboto';
             font-size: 2vh;
@@ -345,7 +354,7 @@ body {
     } 
     
     #myCalendar{
-        border-radius: 10px;
+        border-radius: 20px;
         margin-top: 0 !important;
     }
     
@@ -368,7 +377,7 @@ body {
         .tabBg{
             background-color: $color-secondary !important;
             margin-top: 0;
-            border-radius: 10px;
+            border-radius: 20px;
              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
         }
         
@@ -379,11 +388,12 @@ body {
             color: $color-primary;
             border-radius: 60px;
             font-size: 5vw;
-            padding: 2.5vh 20vw;
+            padding: 2.5vh 28vw;
             margin-top: 8vh;
             margin-left: auto;
             margin-right: auto;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            text-align: center;
         }
     }
     
@@ -551,7 +561,7 @@ iframe{
     }
     
     form {
-      padding-top: 1vh;
+      padding-top: 6vh;
       display: flex;
       flex-direction: column;
       align-content: center;
@@ -628,54 +638,6 @@ iframe{
     }
 }
 
-#perfil-logado{
-    
-    .boxmodel1 {   
-        width: 250px;
-        height: 250px;
-        margin-top: 2vh;
-        background: $color-secondary;
-        color: #FFF;
-        position: relative;
-    }
-    
-    button {
-      display: flex;
-      border: none;
-      background-color: $color-secondary;
-      color: $color-primary;
-      border-radius: 60px;
-      font-size: 4vw;
-      padding: 2.5vh 20vw;
-      margin-top: 8vh;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    }
-}
-
-.progress-bar{
-    color: $color-secondary;
-    display: flex;
-    margin: 2vh auto 0 auto;
-    width: 80%;
-    text-align: center;
-    line-height: 0;
-    font-size: 2vh;
-    pointer-events: none;
-    
-    hr{
-        width: 100%;
-        height: 0.5vh;
-        background-color: $color-secondary;
-        margin: 0.8vh -0.5vw 0 -0.5vw;
-        border: none;
-    }
-}
-
-.datepicker-date-display {
-    background-color: $color-secondary !important;
-}
 
 /*HISTORICO*/
 #historico {
@@ -692,7 +654,7 @@ iframe{
         font-family: "Roboto";
         background-color: $color-secondary;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
+        border-radius: 20px;
     }
     
     .progress-navbar {
@@ -753,6 +715,81 @@ iframe{
         
     }
 }
+
+#perfilogado {
+    
+    h3{
+        font-style: normal;
+        color: $color-secondary;
+        text-align: center;
+        font-size: 4vw;
+        font-weight: normal;
+    }
+    
+    .infor1 {
+      display: flex;
+      border-bottom: 0.4px solid #2A0001;
+      background-color: inherit;
+      text-align: center;
+      font-size: 4vw;
+      flex-direction: column;
+      font-family: 'Roboto'; 
+      margin: 1.5vh 15vw 0 15vw;
+    }
+    
+    .infor2 {
+      display: flex;
+      border-bottom: 0.4px solid #2A0001;
+      background-color: inherit;
+      text-align: center;
+      font-size: 4vw;
+      flex-direction: column;
+      font-family: 'Roboto'; 
+      margin: 1.5vh 15vw 0 15vw;
+    }
+    
+    .infor3 {
+      display: flex;
+      border-bottom: 0.4px solid #2A0001;
+      background-color: inherit;
+      text-align: center;
+      font-size: 4vw;
+      flex-direction: column;
+      font-family: 'Roboto'; 
+      margin: 1.5vh 15vw 0 15vw;
+    }
+    
+    .infor4 {
+      display: flex;
+      border-bottom: 0.4px solid #2A0001;
+      background-color: inherit;
+      text-align: center;
+      font-size: 4vw;
+      flex-direction: column;
+      font-family: 'Roboto'; 
+      margin: 1.5vh 15vw 0 15vw;
+    }
+    
+    ::placeholder {
+      color: $color-secondary;
+      opacity: 0.5;
+    }
+    
+    button {
+      display: flex;
+      border: none;
+      background-color: $color-secondary;
+      color: $color-primary;
+      border-radius: 60px;
+      font-size: 4vw;
+      padding: 2.5vh 20vw;
+      margin-top: 8vh;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);    
+    }
+}
+
 
 
 @keyframes slide-top-logoholder {

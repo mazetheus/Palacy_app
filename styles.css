@@ -150,12 +150,13 @@ body button {
   background: #2A0001;
   color: #fff1d6;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border-radius: 20px;
   width: 80%;
+  padding-bottom: 2vh;
 }
 #agendar .tabcontent h2 {
   font-size: 6vw;
-  margin-left: 5vw;
+  text-align: center;
 }
 #agendar .tabcontent button {
   color: #fff1d6;
@@ -170,6 +171,7 @@ body button {
 #agendar .tabcontent .resumo {
   display: flex;
   flex-direction: column;
+  padding-bottom: 2vh;
 }
 #agendar .tabcontent .resumo .line {
   display: flex;
@@ -189,7 +191,8 @@ body button {
 #agendar #tabUnidade button {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 #agendar #tabUnidade h3 {
   margin-bottom: 1.5vh;
@@ -206,6 +209,8 @@ body button {
   align-itens: center;
   font-family: "Roboto" !important;
   width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 #agendar #tabServico .coluna {
   display: flex;
@@ -223,6 +228,10 @@ body button {
 #agendar #tabServico .preco {
   margin: auto 0;
   font-size: 2vh;
+}
+#agendar #tabBarbeiro .barbeiro {
+  width: 90%;
+  margin: 0 auto;
 }
 #agendar #tabBarbeiro .barbeiro p {
   text-align: left;
@@ -255,14 +264,14 @@ body button {
 #agendar #tabHorario .tabBg {
   background-color: #2A0001 !important;
   margin-top: 0;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 #agendar #tabHorario .horarios {
   overflow: hidden;
   margin: 0 4vw;
   background: #fff1d6 !important;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 #agendar #tabHorario .horarios h2 {
@@ -282,14 +291,14 @@ body button {
   padding: 1vh 4vw;
   background: #2A0001;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   font-family: "Roboto";
   font-size: 2vh;
   text-align: center;
 }
 #agendar #myCalendar {
-  border-radius: 10px;
+  border-radius: 20px;
   margin-top: 0 !important;
 }
 #agendar #tabResumo {
@@ -309,7 +318,7 @@ body button {
 #agendar #tabResumo .tabBg {
   background-color: #2A0001 !important;
   margin-top: 0;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 #agendar #tabResumo button {
@@ -319,11 +328,12 @@ body button {
   color: #fff1d6;
   border-radius: 60px;
   font-size: 5vw;
-  padding: 2.5vh 20vw;
+  padding: 2.5vh 28vw;
   margin-top: 8vh;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
 iframe {
@@ -461,7 +471,7 @@ iframe {
   text-align: center;
 }
 #perfil-editar form {
-  padding-top: 1vh;
+  padding-top: 6vh;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -526,50 +536,6 @@ iframe {
   border: 4px solid #2A0001;
 }
 
-#perfil-logado .boxmodel1 {
-  width: 250px;
-  height: 250px;
-  margin-top: 2vh;
-  background: #2A0001;
-  color: #FFF;
-  position: relative;
-}
-#perfil-logado button {
-  display: flex;
-  border: none;
-  background-color: #2A0001;
-  color: #fff1d6;
-  border-radius: 60px;
-  font-size: 4vw;
-  padding: 2.5vh 20vw;
-  margin-top: 8vh;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-}
-
-.progress-bar {
-  color: #2A0001;
-  display: flex;
-  margin: 2vh auto 0 auto;
-  width: 80%;
-  text-align: center;
-  line-height: 0;
-  font-size: 2vh;
-  pointer-events: none;
-}
-.progress-bar hr {
-  width: 100%;
-  height: 0.5vh;
-  background-color: #2A0001;
-  margin: 0.8vh -0.5vw 0 -0.5vw;
-  border: none;
-}
-
-.datepicker-date-display {
-  background-color: #2A0001 !important;
-}
-
 /*HISTORICO*/
 #historico {
   display: flex;
@@ -585,7 +551,7 @@ iframe {
   font-family: "Roboto";
   background-color: #2A0001;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 #historico .progress-navbar {
   padding-top: 3vh;
@@ -632,6 +598,71 @@ iframe {
 #historico .atendimento .avaliar p {
   margin: 0;
   font-size: 2.5vw;
+}
+
+#perfilogado h3 {
+  font-style: normal;
+  color: #2A0001;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: normal;
+}
+#perfilogado .infor1 {
+  display: flex;
+  border-bottom: 0.4px solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  font-size: 4vw;
+  flex-direction: column;
+  font-family: "Roboto";
+  margin: 1.5vh 15vw 0 15vw;
+}
+#perfilogado .infor2 {
+  display: flex;
+  border-bottom: 0.4px solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  font-size: 4vw;
+  flex-direction: column;
+  font-family: "Roboto";
+  margin: 1.5vh 15vw 0 15vw;
+}
+#perfilogado .infor3 {
+  display: flex;
+  border-bottom: 0.4px solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  font-size: 4vw;
+  flex-direction: column;
+  font-family: "Roboto";
+  margin: 1.5vh 15vw 0 15vw;
+}
+#perfilogado .infor4 {
+  display: flex;
+  border-bottom: 0.4px solid #2A0001;
+  background-color: inherit;
+  text-align: center;
+  font-size: 4vw;
+  flex-direction: column;
+  font-family: "Roboto";
+  margin: 1.5vh 15vw 0 15vw;
+}
+#perfilogado ::placeholder {
+  color: #2A0001;
+  opacity: 0.5;
+}
+#perfilogado button {
+  display: flex;
+  border: none;
+  background-color: #2A0001;
+  color: #fff1d6;
+  border-radius: 60px;
+  font-size: 4vw;
+  padding: 2.5vh 20vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes slide-top-logoholder {
