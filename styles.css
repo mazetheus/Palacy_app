@@ -64,7 +64,7 @@ body input {
 
 .tabcontent {
   display: none;
-  margin-top: 60%;
+  margin-top: 55%;
   border-top: none;
   text-align: justify;
   font-family: "Roboto";
@@ -72,7 +72,7 @@ body input {
 }
 
 .small {
-  margin-top: 110% !important;
+  margin-top: 106% !important;
 }
 
 #agendar {
@@ -80,18 +80,21 @@ body input {
   align-items: center;
   flex-direction: column;
 }
+#agendar input {
+  color: #fff1d6 !important;
+}
 #agendar .fixed-top {
   position: fixed;
-  backdrop-filter: blur(2px);
 }
 #agendar .progress-navbar {
-  padding: 3vh 0;
+  padding-top: 3vh;
+  padding-bottom: 0;
+  margin: 0 10vw;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  width: 100%;
+  width: 80vw;
   justify-content: space-around;
-  width: 100vw;
 }
 #agendar .progress-navbar i {
   font-size: 5vw;
@@ -102,6 +105,8 @@ body input {
   width: 12vw;
   height: 12vw;
   background: #9B9B9B;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   color: #2A0001;
 }
@@ -156,12 +161,25 @@ body input {
   color: #FFD075;
   font-size: 3vw;
 }
+#agendar .tabcontent .horarios h2 {
+  color: #2A0001 !important;
+}
 #agendar .done {
   background-color: #698C5F !important;
   transition: background-color 0.7s;
   -webkit-animation: blink 0.7s both;
   animation: blink 0.7s both;
 }
+#agendar .icon-bg {
+  display: flex;
+  flex-direction: column;
+  align-itens: center;
+  padding-bottom: 0;
+}
+#agendar .icon-bg .fa-caret-up {
+  color: #2A0001;
+}
+
 iframe {
   position: relative;
   border: none;
@@ -309,7 +327,6 @@ iframe {
   font-size: 4vw;
 }
 
-/*CADASTRO*/
 #cadastro h3 {
   font-style: normal;
   color: #2A0001;
@@ -350,6 +367,36 @@ iframe {
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
+#cadastro .cancelar {
+  margin-top: 1vh;
+  font-size: 4vw;
+  padding: 2vh 8vw;
+  color: #2A0001 !important;
+  background-color: inherit;
+  border: 4px solid #2A0001;
+}
+
+#perfil-logado .boxmodel1 {
+  width: 250px;
+  height: 250px;
+  margin-top: 2vh;
+  background: #2A0001;
+  color: #FFF;
+  position: relative;
+}
+#perfil-logado button {
+  display: flex;
+  border: none;
+  background-color: #2A0001;
+  color: #fff1d6;
+  border-radius: 60px;
+  font-size: 4vw;
+  padding: 2.5vh 20vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
 
 .progress-bar {
   color: #2A0001;
@@ -367,6 +414,10 @@ iframe {
   background-color: #2A0001;
   margin: 0.8vh -0.5vw 0 -0.5vw;
   border: none;
+}
+
+.datepicker-date-display {
+  background-color: #2A0001 !important;
 }
 
 /*HISTORICO*/
@@ -395,7 +446,6 @@ iframe {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  width: 80%;
   justify-content: space-around;
   width: 100vw;
 }
@@ -404,7 +454,7 @@ iframe {
   font-size: 3vw;
   width: 25vw;
   height: 12vw;
-  background-color: inherit;
+  background-color: #fff1d6;
   border-radius: 10px;
   color: #2A0001;
   border: 3px solid #2A0001;
@@ -436,20 +486,6 @@ iframe {
 #historico .atendimento .avaliar p {
   margin: 0;
   font-size: 2.5vw;
-}
-
-/* PERFIL LOGADO */
-#perfilogado .progress-navbar {
-  padding: 3vh 0;
-  display: flex;
-  justify-content: space-around;
-}
-#perfilogado p.boxmodel1 {
-  width: 250px;
-  height: 250px;
-  background: #2A0001;
-  color: #FFF;
-  position: relative;
 }
 
 @keyframes slide-top-logoholder {

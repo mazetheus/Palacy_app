@@ -1,11 +1,11 @@
 :root {
-    --vanilla-calendar-bg-color: #fff;
-    --vanilla-calendar-border-radius: 5px;
-    --vanilla-calendar-border-color: #e7e9ed;
+    --vanilla-calendar-bg-color: #2A0001;
+    --vanilla-calendar-border-radius: 20px;
+    --vanilla-calendar-border-color: #2A0001;
     --vanilla-calendar-today-bg-color: #E7E9ED;
-    --vanilla-calendar-today-color: #333;
-    --vanilla-calendar-selected-bg-color: #538fcd;
-    --vanilla-calendar-selected-color: #fff;
+    --vanilla-calendar-today-color: #2A0001;
+    --vanilla-calendar-selected-bg-color: #fff1d6;
+    --vanilla-calendar-selected-color: #2A0001;
     --vanilla-calendar-selected-radius: 5px;
 }
 
@@ -15,10 +15,7 @@
 
 .vanilla-calendar {
     background-color: var(--vanilla-calendar-bg-color);
-    border-radius: var(--vanilla-calendar-border-radius);
-    border: solid 1px var(--vanilla-calendar-border-color);
-    box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     width: 350px;
 }
@@ -56,7 +53,7 @@
 }
 
 .vanilla-calendar .vanilla-calendar-header svg {
-    fill: var(--vanilla-calendar-today-color);
+    fill: var(--vanilla-calendar-selected-bg-color);
 }
 
 .vanilla-calendar .vanilla-calendar-header__label {
@@ -66,19 +63,20 @@
 }
 
 .vanilla-calendar .vanilla-calendar-week {
-    background-color: var(--vanilla-calendar-selected-bg-color);
+    background-color: inherit;
     display: flex;
     flex-wrap: wrap;
 }
 
 .vanilla-calendar .vanilla-calendar-week span {
-    color: var(--vanilla-calendar-selected-color);
+    color: var (--vanilla-calendar-today-color);
     flex-direction: column;
     flex: 0 0 14.28%;
-    font-size: 1em;
+    font-size: 0.8em;
+    opacity: 0.8;
     font-weight: bold;
     max-width: 14.28%;
-    padding: 15px 0px;
+    padding: 2px 0 10px 0px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -92,7 +90,7 @@
 
 .vanilla-calendar .vanilla-calendar-date {
     align-items: center;
-    background-color: #fff;
+    background-color: inherit;
     border-radius: var(--vanilla-calendar-border-radius);
     display: flex;
     flex-direction: column;

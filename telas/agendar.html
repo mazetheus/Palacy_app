@@ -4,11 +4,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css">
     
-    <link rel="stylesheet" href="../css/materialize.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../js/materialize.js"></script>
+    
+
+        <link rel="stylesheet" href="../css/vanilla-calendar.css">
+        <script src="../js/vanilla-calendar-min.js"></script>
     
 
 <style>
@@ -20,10 +22,10 @@
 <body>
 
     <section id="agendar">
+       
        <div class="fixed-top">
- 
         <arcticle id="top-navbar" class="top-navbar-big">
-            <article ><img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo"></article>
+            <img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo">
             <h2 id="title-aba" class="title-aba title-aba-big">FAÇA AGORA O SEU <br><strong>AGENDAMENTO</strong></h2>   
         </arcticle>
 
@@ -31,8 +33,11 @@
     <arcticle class="progress-navbar">
 
 <!--         ÍCONE UNIDADE -->
-           <button id="buttonUnidade" type="button" class=" active" onclick="navegacaoAgendamento(event, 'tabUnidade')">
-            <i class='fas fa-map-marker-alt'></i></button>
+        <div class="icon-bg">
+            <button id="buttonUnidade" type="button" class=" active" onclick="navegacaoAgendamento(event, 'tabUnidade')">
+                <i class='fas fa-map-marker-alt'></i></button>
+            <i class="fas fa-caret-up"></i>
+        </div>
             
             <i class="fas fa-circle dot"></i>
 
@@ -128,9 +133,10 @@
 <!-- HORARIO -->
     <div id="tabHorario" class="tabcontent">
       <h2>Escolha um <strong>horario</strong></h2>
-        <!-- <button type="date" class= "unidade" onclick="progressao(event, 'buttonHorario', 'buttonResumo')"><div class="info"><h3>PAMPULHA</h3></div></button> -->
-        
-        <input type="text" class="datepicker">    
+            <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+        <div class=horarios>
+            <h2>Escolha um <strong>horario</strong></h2>
+        </div>   
     </div>
     
 <!-- RESUMO -->
@@ -144,8 +150,6 @@
 
 <script>
     
-    const Calender = document.querySelector('.datepicker');
-    M.Datepicker.init(Calender,{});
     
     function navegacaoAgendamento(evt, tabName) {
         var i, tabcontent, tablinks;
@@ -195,7 +199,39 @@
         element.classList.remove('title-aba-big');
     };
     
-   
+    let calendar = new VanillaCalendar({
+                selector: "#myCalendar",
+                months: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+                shortWeekday: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+                onSelect: (data, elem) => {
+                    console.log(data, elem)
+                }
+            })
+    let btnPastDates = document.querySelector('[name=pastDates]')
+            btnPastDates.addEventListener('click', () => {
+                pastDates = !pastDates
+                calendar.set({pastDates: pastDates})
+                btnPastDates.innerText = `${(pastDates ? 'Disable' : 'Enable')} past dates`
+            })
+   let btnAvailableDates = document.querySelector('[name=availableDates]')
+            btnAvailableDates.addEventListener('click', () => {
+                availableDates = !availableDates
+                btnAvailableDates.innerText = `${(availableDates ? 'Clear available dates' : 'Set available dates')}`
+                if (!availableDates) {
+                    calendar.set({availableDates: [], datesFilter: false})
+                    return
+                }
+                let dates = () => {
+                    let result = []
+                    for (let i = 1; i < 15; ++i) {
+                        if (i % 2) continue
+                        let date = new Date(new Date().getTime() + (60 * 60 * 24 * 1000) * i)
+                        result.push({date: `${String(date.getFullYear())}-${String(date.getMonth() + 1).padStart(2, 0)}-${String(date.getDate()).padStart(2, 0)}`})
+                    }
+                    return result
+                }
+                calendar.set({availableDates: dates(), availableWeekDays: [], datesFilter: true})
+            })
     
 </script>
 
