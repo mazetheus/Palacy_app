@@ -1,9 +1,16 @@
 body {
   margin: 0px;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
 }
 body input {
   color: #2A0001;
+}
+body h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+body button {
+  font-family: "Roboto" !important;
 }
 
 #container {
@@ -30,11 +37,11 @@ body input {
 }
 #top-navbar .img-logo {
   display: flex;
-  margin: 0 auto;
   height: 30vw;
-  width: auto;
+  width: 30vw;
   padding: 2vw;
   transition: height 1s;
+  transition: width 1s;
 }
 #top-navbar .title-aba {
   text-align: center;
@@ -53,6 +60,8 @@ body input {
 }
 .top-navbar-big .img-logo {
   height: 60vw !important;
+  width: 60vw !important;
+  margin: 0 auto;
 }
 
 .title-aba-big {
@@ -64,27 +73,23 @@ body input {
 
 .tabcontent {
   display: none;
-  margin-top: 55%;
   border-top: none;
   text-align: justify;
   font-family: "Roboto";
+  max-height: 65vh;
+  width: 80vw;
+  overflow: scroll;
   transition: margin-top 1s;
-}
-
-.small {
-  margin-top: 106% !important;
 }
 
 #agendar {
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: "Roboto" !important;
 }
 #agendar input {
   color: #fff1d6 !important;
-}
-#agendar .fixed-top {
-  position: fixed;
 }
 #agendar .progress-navbar {
   padding-top: 3vh;
@@ -110,10 +115,6 @@ body input {
   border-radius: 10px;
   color: #2A0001;
 }
-#agendar .progress-navbar button.active {
-  background: #2A0001;
-  color: #fff;
-}
 #agendar .progress-navbar .dot {
   margin-top: auto;
   margin-bottom: auto;
@@ -122,6 +123,28 @@ body input {
 }
 #agendar .progress-navbar .inactive {
   pointer-events: none;
+}
+#agendar .divBotoes {
+  display: flex;
+  flex-direction: column;
+  align-itens: center;
+  padding-bottom: 0;
+  line-height: 0;
+}
+#agendar .divBotoes .fa-caret-up {
+  display: none;
+  font-size: 4vh;
+  color: #2A0001;
+  vertical-align: text-bottom;
+  padding-top: 1vh;
+  line-height: 1vh;
+}
+#agendar .active button {
+  background: #2A0001;
+  color: #fff;
+}
+#agendar .active .fa-caret-up {
+  display: block;
 }
 #agendar .tabcontent {
   background: #2A0001;
@@ -144,25 +167,18 @@ body input {
   border-bottom: 2px solid #fff1d6;
   padding: 2vw 3vh;
 }
-#agendar .tabcontent .barbeiro p {
-  text-align: left;
-  font-size: 4vw;
-  margin-top: 3vw;
-  margin-left: 5vw;
-  line-height: 4vw;
+#agendar .tabcontent .resumo {
+  display: flex;
+  flex-direction: column;
 }
-#agendar .tabcontent .barbeiro img {
-  border-radius: 50%;
-  width: 15vw;
-  height: auto;
-  border: 2px solid #fff1d6;
+#agendar .tabcontent .resumo .line {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
-#agendar .tabcontent .barbeiro i {
-  color: #FFD075;
-  font-size: 3vw;
-}
-#agendar .tabcontent .horarios h2 {
-  color: #2A0001 !important;
+#agendar .tabcontent .resumo i {
+  padding: 0 5vw;
 }
 #agendar .done {
   background-color: #698C5F !important;
@@ -170,14 +186,144 @@ body input {
   -webkit-animation: blink 0.7s both;
   animation: blink 0.7s both;
 }
-#agendar .icon-bg {
+#agendar #tabUnidade button {
   display: flex;
   flex-direction: column;
-  align-itens: center;
-  padding-bottom: 0;
+  width: 100%;
 }
-#agendar .icon-bg .fa-caret-up {
+#agendar #tabUnidade h3 {
+  margin-bottom: 1.5vh;
+  line-height: 1vh;
+}
+#agendar #tabUnidade p {
+  margin: 0;
+  font-size: 1.5vh;
+}
+#agendar #tabServico button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-itens: center;
+  font-family: "Roboto" !important;
+  width: 100%;
+}
+#agendar #tabServico .coluna {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#agendar #tabServico .coluna p {
+  font-size: 1.5vh;
+  margin: 0;
+}
+#agendar #tabServico h3 {
+  margin-bottom: 1.5vh;
+  line-height: 1vh;
+}
+#agendar #tabServico .preco {
+  margin: auto 0;
+  font-size: 2vh;
+}
+#agendar #tabBarbeiro .barbeiro p {
+  text-align: left;
+  font-size: 4vw;
+  margin-top: 3vw;
+  margin-left: 5vw;
+  line-height: 4vw;
+}
+#agendar #tabBarbeiro .barbeiro img {
+  border-radius: 50%;
+  width: 15vw;
+  height: auto;
+  border: 2px solid #fff1d6;
+}
+#agendar #tabBarbeiro .barbeiro i {
+  color: #FFD075;
+  font-size: 3vw;
+}
+#agendar #tabHorario {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+#agendar #tabHorario h2 {
+  margin-top: 0;
+  padding-top: 2.5vh;
+  margin-bottom: 0;
+}
+#agendar #tabHorario .tabBg {
+  background-color: #2A0001 !important;
+  margin-top: 0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#agendar #tabHorario .horarios {
+  overflow: hidden;
+  margin: 0 4vw;
+  background: #fff1d6 !important;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#agendar #tabHorario .horarios h2 {
+  margin: 0;
+  font-size: 2.5vh;
+  padding-top: 1vh;
+  padding-left: 2vw;
   color: #2A0001;
+}
+#agendar #tabHorario .disponiveis {
+  display: flex;
+  flex-grow: row nowrap;
+  overflow: scroll;
+}
+#agendar #tabHorario .opcao {
+  margin: 2vh 0 2vh 3vw;
+  padding: 1vh 4vw;
+  background: #2A0001;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  font-family: "Roboto";
+  font-size: 2vh;
+  text-align: center;
+}
+#agendar #myCalendar {
+  border-radius: 10px;
+  margin-top: 0 !important;
+}
+#agendar #tabResumo {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+#agendar #tabResumo h2 {
+  padding-top: 2.5vh;
+  margin: 0;
+  text-align: center;
+}
+#agendar #tabResumo p {
+  margin: 1.5vh 0;
+}
+#agendar #tabResumo .tabBg {
+  background-color: #2A0001 !important;
+  margin-top: 0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#agendar #tabResumo button {
+  display: flex;
+  border: none;
+  background-color: #2A0001;
+  color: #fff1d6;
+  border-radius: 60px;
+  font-size: 5vw;
+  padding: 2.5vh 20vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 iframe {
@@ -193,16 +339,16 @@ iframe {
   display: flex;
   position: fixed;
   bottom: 0;
+  max-height: 10vh;
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
 }
 #bottom-navbar button {
   position: relative;
-  background-color: inherit;
+  background-color: #2A0001;
   width: 20vw;
   height: 20vw;
-  border-radius: 10px;
   border: 0px;
   line-height: 2.5vh;
   font-size: 3vw;
@@ -211,8 +357,12 @@ iframe {
 }
 #bottom-navbar button.active {
   background: #f2f2f2;
+  border-radius: 25px;
   color: #2A0001;
   animation: slide-top-navbar 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#bottom-navbar .navbar-bg {
+  background: #f2f2f2;
 }
 #bottom-navbar i {
   font-size: 4vw;
@@ -426,16 +576,12 @@ iframe {
   align-items: center;
   flex-direction: column;
 }
-#historico .fixed-top {
-  position: fixed;
-  backdrop-filter: blur(2px);
-}
 #historico .tabcontent {
   display: none;
   font-size: 3.5vw;
-  margin-top: 53%;
-  border-top: none;
-  text-align: justify;
+  max-height: 85vh;
+  overflow: scroll;
+  border: none;
   font-family: "Roboto";
   background-color: #2A0001;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
@@ -472,7 +618,7 @@ iframe {
   flex-direction: row;
   flex-wrap: nowrap;
   color: #fff1d6;
-  width: 80vw;
+  width: auto;
   height: 50px;
   padding: 2vh 0 2vh 5vw;
 }

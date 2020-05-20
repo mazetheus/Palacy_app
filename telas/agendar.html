@@ -23,7 +23,6 @@
 
     <section id="agendar">
        
-       <div class="fixed-top">
         <arcticle id="top-navbar" class="top-navbar-big">
             <img id="img-logo" class="img-logo" src="../logo.jpg" alt="logo">
             <h2 id="title-aba" class="title-aba title-aba-big">FAÇA AGORA O SEU <br><strong>AGENDAMENTO</strong></h2>   
@@ -32,46 +31,61 @@
 
     <arcticle class="progress-navbar">
 
-<!--         ÍCONE UNIDADE -->
-        <div class="icon-bg">
-            <button id="buttonUnidade" type="button" class=" active" onclick="navegacaoAgendamento(event, 'tabUnidade')">
-                <i class='fas fa-map-marker-alt'></i></button>
+<!-- ÍCONE UNIDADE -->
+        <div id="divBotaoUnidade" class="divBotoes">
+            <button id="buttonUnidade" type="button" class="active" onclick="navegacaoAgendamento(event, 'tabUnidade', 'divBotaoUnidade')">
+            <i class='fas fa-map-marker-alt'></i></button>
             <i class="fas fa-caret-up"></i>
         </div>
             
-            <i class="fas fa-circle dot"></i>
+        <i class="fas fa-circle dot"></i>
 
-<!--         ÍCONE SERVIÇO   -->
-           <button id="buttonServico" type="button tablinks" class="inactive" onclick="navegacaoAgendamento(event, 'tabServico')">
-           <i class='fas fas fa-cut'></i></button>
+<!-- ÍCONE SERVIÇO   -->
+        <div id="divBotaoServico" class="divBotoes">
+            <button id="buttonServico" type="button tablinks" class="inactive" onclick="navegacaoAgendamento(event, 'tabServico', 'divBotaoServico')">
+            <i class='fas fas fa-cut'></i></button>
+            <i class="fas fa-caret-up"></i>
+        </div>
            
-           <i class="fas fa-circle dot"></i>
+        <i class="fas fa-circle dot"></i>
 
-<!--         ÍCONE BARBEIRO -->        
-           <button id="buttonBarbeiro" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabBarbeiro')">
+<!-- ÍCONE BARBEIRO --> 
+        <div id="divBotaoBarbeiro" class="divBotoes">     
+            <button id="buttonBarbeiro" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabBarbeiro', 'divBotaoBarbeiro')">
             <i class='fas far fa-user'></i></button>
+            <i class="fas fa-caret-up"></i>
+        </div>
             
-            <i class="fas fa-circle dot"></i>
+        <i class="fas fa-circle dot"></i>
 
-<!--         ÍCONE DATA -->
-            <button id="buttonHorario" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabHorario')">
-                <i class='fas fa-calendar-alt'></i></button>
+<!-- ÍCONE DATA -->
+        <div id="divBotaoHorario" class="divBotoes "> 
+            <button id="buttonHorario" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabHorario', 'divBotaoHorario')">
+            <i class='fas fa-calendar-alt'></i></button>
+            <i class="fas fa-caret-up"></i>
+        </div>
                 
-                <i class="fas fa-circle dot"></i>
+        <i class="fas fa-circle dot"></i>
 
-<!--         ÍCONE RESUMO -->        
-           <button id="buttonResumo" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabResumo')">
+<!-- ÍCONE RESUMO --> 
+        <div id="divBotaoResumo" class="divBotoes">       
+            <button id="buttonResumo" type="button" class="inactive" onclick="navegacaoAgendamento(event, 'tabResumo', 'divBotaoResumo')">
             <i class='fas fa-check'></i></button>
-            
-        </arcticle>
+            <i class="fas fa-caret-up"></i>
+        </div>
+        
+    </arcticle>
 
-    </div>
 
+
+<!-- TABS DAS OPÇÕES DE AGENDAMENTO -->
 
 <!-- UNIDADE -->
     <div id="tabUnidade" class="tabcontent small" onclick="upUp()">
       <h2>Escolha uma <strong>unidade</strong></h2>
-        <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico', 'unidade')"><h3>PAMPULHA</h3></button>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico', 'unidade')">
+        <h3 class="unidade">PAMPULHA</h3>
+            <p class="rua">Rua do Madereiro, 125 - Centro</p></button>
         
         <button type="button" class= "unidade" onclick="progressao(event, 'buttonUnidade', 'buttonServico', 'unidade')"><h3>RUA 2</h3></button>
     </div>
@@ -79,7 +93,13 @@
 <!-- SERVIÇO -->
     <div id="tabServico" class="tabcontent">
       <h2>Escolha um <strong>serviço</strong></h2>
-        <button type="button" class= "unidade" onclick="progressao(event, 'buttonServico', 'buttonBarbeiro', 'servico')"><h3>BARBA</h3></button>
+        <button type="button" class= "unidade" onclick="progressao(event, 'buttonServico', 'buttonBarbeiro', 'servico')">
+            <div class="coluna">
+                <h3 class="servico">BARBA</h3>
+                <p class="tempo">20min</p>
+            </div>
+            <p class="preco">R$20.00</p>
+        </button>
     </div>
 
 <!-- BARBEIRO -->
@@ -132,17 +152,54 @@
 
 <!-- HORARIO -->
     <div id="tabHorario" class="tabcontent">
-      <h2>Escolha um <strong>horario</strong></h2>
-            <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+       <div class="tabBg">
+            <h2>Escolha um <strong>dia</strong></h2>
+            <div id="myCalendar" class="vanilla-calendar"></div>
+        </div>
+        
         <div class=horarios>
             <h2>Escolha um <strong>horario</strong></h2>
+            <div class="disponiveis">
+                <button type="button" class="opcao" onclick="progressao(event, 'buttonHorario', 'buttonResumo', 'barbeiro')">09:00</button>
+                <button type="button" class="opcao" onclick="progressao(event, 'buttonHorario', 'buttonResumo', 'barbeiro')">09:00</button>
+                <button type="button" class="opcao" onclick="progressao(event, 'buttonHorario', 'buttonResumo', 'barbeiro')">09:00</button>
+                <button type="button" class="opcao" onclick="progressao(event, 'buttonHorario', 'buttonResumo', 'barbeiro')">09:00</button>
+                <button type="button" class="opcao" onclick="progressao(event, 'buttonHorario', 'buttonResumo', 'barbeiro')">09:00</button>
+                <button type="button" class="opcao" onclick="progressao(event, 'buttonHorario', 'buttonResumo', 'barbeiro')">09:00</button>
+            </div>
         </div>   
     </div>
     
 <!-- RESUMO -->
     <div id="tabResumo" class="tabcontent">
+     <div class="tabBg">
       <h2><strong>Resumo</strong></h2>
-        <button type="button" class= "unidade" onclick=""><div class="info"><h3>PAMPULHA</h3></div></button>
+       <div class="resumo">
+                <div class="line">
+                    <i class='fas fa-map-marker-alt'></i>
+                    <p class="unidade">PAMPULHA</p>
+                </div>
+
+                <div class="line">
+                    <i class='fas fas fa-cut'></i>
+                    <p class="servico">CORTE</p>
+               </div>
+
+               <div class="line">
+                   <i class='fas far fa-user'></i>
+                    <p class="barbeiro">BARBEIRO</p>
+               </div>
+
+               <div class="line">
+                   <i class='fas fa-calendar-alt'></i>
+                    <p class="data">25/05/2020</p>
+                    <i class="fas fa-clock"></i>
+                    <p class="hora">16:00</p>
+               </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="continuar" value="Submit" onclick="alert('Agendado!');"><strong>AGENDAR</strong></button>
     </div>
     
 </section>
@@ -151,19 +208,20 @@
 <script>
     
     
-    function navegacaoAgendamento(evt, tabName) {
+    function navegacaoAgendamento(evt, tabName, buttonName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
-        tablinks = document.getElementsByClassName("tablinks");
+        tablinks = document.getElementsByClassName("divBotoes");
         
         for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            tablinks[i].classList.remove('active');
         }
         document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        
+        document.getElementById(buttonName).classList.add('active');
     };
 
     document.getElementById("buttonUnidade").click();

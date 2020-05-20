@@ -1,13 +1,20 @@
 $color-primary: #fff1d6;
 $color-secondary: #2A0001;
-$logoholder-animation-time: 0.7;
 
 body {
     margin: 0px;
-    font-family: 'Roboto';
+    font-family: 'Roboto' !important;
     
     input{
         color: $color-secondary;
+    }
+    
+    h2{
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    button{
+        font-family: 'Roboto' !important;
     }
 }
 
@@ -32,15 +39,16 @@ body {
     background-color: $color-primary;
     border-radius: 0px 0px 30px 30px;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.25);
-        
+    
+    
     .img-logo{
         display: flex;
-        margin: 0 auto;
         height: 30vw;
-        width: auto;
+        width: 30vw;
         padding: 2vw;
         
         transition: height 1s;
+        transition: width 1s;
     }
     
     .title-aba{
@@ -62,6 +70,8 @@ body {
     flex-direction: column !important;
     .img-logo{
             height: 60vw !important;
+            width: 60vw !important;
+            margin: 0 auto;
         }
 }
 
@@ -74,30 +84,30 @@ body {
 
 .tabcontent {
         display: none;
-        margin-top: 55%;
         border-top: none;
         text-align: justify;
         font-family: 'Roboto';
+        max-height: 65vh;
+        width: 80vw;
+        overflow: scroll;
     
         transition: margin-top 1s;
 }
 
-.small{
-        margin-top: 106% !important;
-}
 
 #agendar{
     
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: 'Roboto' !important;
     
     input{
         color: $color-primary !important;
     }
     
     .fixed-top{
-        position: fixed;
+        //position: fixed;
         //backdrop-filter: blur(2px);
     }
     
@@ -128,12 +138,6 @@ body {
             color: $color-secondary;
         }
         
-        button.active{
-            background: $color-secondary;
-            color: #fff;
-        }
-        
-        
         .dot{
             margin-top: auto;
             margin-bottom: auto;
@@ -146,6 +150,34 @@ body {
         }   
     }
     
+     .divBotoes{
+        display: flex;
+        flex-direction: column;
+        align-itens: center;
+        padding-bottom: 0;
+        line-height: 0;
+
+            .fa-caret-up{
+                display: none;
+                font-size: 4vh;
+                color: $color-secondary;
+                vertical-align: text-bottom;
+                padding-top: 1vh;
+                line-height: 1vh;
+            }
+        }
+    
+    .active{
+        button{
+            background: $color-secondary;
+            color: #fff;
+        }
+        .fa-caret-up{
+            display: block;
+        }
+     }
+    
+
     .tabcontent{
         background: $color-secondary;
         color: $color-primary;
@@ -169,6 +201,75 @@ body {
             padding: 2vw 3vh;
         } 
         
+        .resumo{
+            display: flex;
+            flex-direction: column;
+            
+            .line{
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+            }
+            
+            i{
+                padding: 0 5vw;
+            }
+        }
+    }
+    
+    .done{
+        background-color: #698C5F !important;
+        transition: background-color 0.7s;
+        -webkit-animation: blink 0.7s both;
+	        animation: blink 0.7s both;
+     }
+    
+    #tabUnidade{
+        button{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        h3{
+            margin-bottom: 1.5vh;
+            line-height: 1vh;
+        }
+        p{
+            margin: 0;
+            font-size: 1.5vh;
+        }
+    }
+    
+    #tabServico{
+        button{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-itens: center;
+            font-family: 'Roboto' !important;
+            width: 100%;
+        }
+        .coluna{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            p{
+                font-size: 1.5vh;
+                margin: 0;
+            }
+        }
+        h3{
+            margin-bottom: 1.5vh;
+            line-height: 1vh;
+        }
+        .preco{
+            margin: auto 0;
+            font-size: 2vh;
+        }
+    }
+    
+    #tabBarbeiro{
         .barbeiro{
             p{
                 text-align: left;
@@ -190,30 +291,102 @@ body {
                 font-size: 3vw;
             }
         }
-        
-        .horarios h2{
-            color: $color-secondary !important;
-         }
     }
     
-    .done{
-        background-color: #698C5F !important;
-        transition: background-color 0.7s;
-        -webkit-animation: blink 0.7s both;
-	        animation: blink 0.7s both;
-     }
-    
-    .icon-bg{
-        display: flex;
-        flex-direction: column;
-        align-itens: center;
-        padding-bottom: 0;
+    #tabHorario{
+        background-color: inherit;
+        border: none;
+        box-shadow: none;
+        overflow: visible;
         
-        .fa-caret-up{
-            color: $color-secondary;
+        h2{
+            margin-top: 0;
+            padding-top: 2.5vh;
+            margin-bottom: 0;
+        }
+        
+        .tabBg{
+            background-color: $color-secondary !important;
+            margin-top: 0;
+            border-radius: 10px;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        }
+        .horarios{
+            overflow: hidden;
+            margin: 0 4vw;
+            background: $color-primary !important;
+            border-radius: 0 0 10px 10px;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
             
+            h2{
+                margin: 0;
+                font-size: 2.5vh;
+                padding-top: 1vh;
+                padding-left: 2vw;
+                color: $color-secondary;
+            }
+        }
+        .disponiveis{
+            display: flex;
+            flex-grow: row nowrap;
+            overflow: scroll;
+        }
+        .opcao{
+            margin: 2vh 0 2vh 3vw;
+            padding: 1vh 4vw;
+            background: $color-secondary;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            border: none;
+            font-family: 'Roboto';
+            font-size: 2vh;
+            text-align: center;
+        }
+    } 
+    
+    #myCalendar{
+        border-radius: 10px;
+        margin-top: 0 !important;
+    }
+    
+    #tabResumo{
+        background-color: inherit;
+        border: none;
+        box-shadow: none;
+        overflow: visible;
+        
+        h2{
+            padding-top: 2.5vh;
+            margin: 0;
+            text-align: center;
+        }
+        
+        p{
+            margin: 1.5vh 0;
+        }
+        
+        .tabBg{
+            background-color: $color-secondary !important;
+            margin-top: 0;
+            border-radius: 10px;
+             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        }
+        
+        button{        
+            display: flex;
+            border: none;
+            background-color: $color-secondary;
+            color: $color-primary;
+            border-radius: 60px;
+            font-size: 5vw;
+            padding: 2.5vh 20vw;
+            margin-top: 8vh;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
         }
     }
+    
 }
 
  
@@ -232,16 +405,16 @@ iframe{
     display: flex;
     position: fixed;
     bottom: 0;
+    max-height: 10vh;
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
     
     button {
         position: relative;
-        background-color: inherit;
+        background-color: $color-secondary;
         width: 20vw;
-        height: 20vw;;
-        border-radius: 10px;
+        height: 20vw;
         border: 0px;
         line-height: 2.5vh;
         font-size: 3vw;
@@ -251,8 +424,13 @@ iframe{
     
     button.active {
         background: #f2f2f2;
+        border-radius: 25px;
         color: $color-secondary;
         animation: slide-top-navbar 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    
+    .navbar-bg{
+        background: #f2f2f2;
     }
 
     i{
@@ -429,8 +607,8 @@ iframe{
     button {
       display: flex;
       border: none;
-      background-color: #2A0001;
-      color: #fff1d6;
+      background-color: $color-secondary;
+      color: $color-primary;
       border-radius: 60px;
       font-size: 4vw;
       padding: 2.5vh 20vw;
@@ -456,7 +634,7 @@ iframe{
         width: 250px;
         height: 250px;
         margin-top: 2vh;
-        background: #2A0001;
+        background: $color-secondary;
         color: #FFF;
         position: relative;
     }
@@ -464,8 +642,8 @@ iframe{
     button {
       display: flex;
       border: none;
-      background-color: #2A0001;
-      color: #fff1d6;
+      background-color: $color-secondary;
+      color: $color-primary;
       border-radius: 60px;
       font-size: 4vw;
       padding: 2.5vh 20vw;
@@ -505,17 +683,12 @@ iframe{
   align-items: center;
   flex-direction: column;
     
-    .fixed-top {
-        position: fixed;
-        backdrop-filter: blur(2px);
-    }
-    
     .tabcontent {
         display: none;
         font-size: 3.5vw;
-        margin-top: 53%;
-        border-top: none;
-        text-align: justify;
+        max-height: 85vh;
+        overflow: scroll;
+        border: none;
         font-family: "Roboto";
         background-color: $color-secondary;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
@@ -523,7 +696,6 @@ iframe{
     }
     
     .progress-navbar {
-        
         padding-top: 3vh;
         display: flex;
         flex-wrap: nowrap;
@@ -539,14 +711,14 @@ iframe{
             height: 12vw;
             background-color: $color-primary;
             border-radius: 10px;
-            color: #2A0001;
+            color: $color-secondary;
             border: 3px solid $color-secondary;
             font-weight: bold;
             
         } 
 
         .active {
-            background-color: #2A0001;
+            background-color: $color-secondary;
             color: #fff;
             margin-top: 1vh;
             border-radius: 10px 10px 0px 0px;
@@ -562,7 +734,7 @@ iframe{
         flex-wrap: nowrap;
         
         color: $color-primary;
-        width: 80vw;
+        width: auto;
         height: 50px;
         padding: 2vh 0 2vh 5vw;
         
