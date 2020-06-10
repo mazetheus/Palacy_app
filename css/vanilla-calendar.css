@@ -29,7 +29,7 @@
     -ms-user-select: none;
     -webkit-appearance: button;
     background: none;
-    border: 0;
+    border: none !important;
     color: inherit;
     cursor: pointer;
     font: inherit;
@@ -38,6 +38,7 @@
     outline: none;
     overflow: visible;
     padding: 0;
+    margin: 0 auto;
     text-align: center;
     &:active {
         border-radius: var(--vanilla-calendar-border-radius);
@@ -52,8 +53,10 @@
     text-transform: uppercase;
 }
 
-.vanilla-calendar .vanilla-calendar-header svg {
+.vanilla-calendar .vanilla-calendar-header i {
     fill: var(--vanilla-calendar-selected-bg-color);
+    
+    margin: 0 auto;
 }
 
 .vanilla-calendar .vanilla-calendar-header__label {
@@ -96,7 +99,7 @@
     flex-direction: column;
     flex: 0 0 14.28%;
     max-width: 14.28%;
-    padding: 10px 0;
+    padding: 6px 0;
 }
 
 .vanilla-calendar .vanilla-calendar-date--active {
