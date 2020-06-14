@@ -51,7 +51,20 @@ body {
         transition: height 1s;
         transition: width 1s;
     }
-    
+
+    .top-itens{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-itens-small{
+        flex-direction: row;
+
+        h2{
+            margin: auto;
+        }
+    }   
+
     .title-aba{
         text-align: center;
         color: $color-secondary;
@@ -201,23 +214,6 @@ body {
             border-bottom: 1px solid $color-primary;
             padding: 2vw 3vh;
         } 
-        
-        .resumo{
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 2vh;
-            
-            .line{
-                display: flex;
-                flex-direction: row;
-                align-content: center;
-                align-items: center;
-            }
-            
-            i{
-                padding: 0 5vw;
-            }
-        }
     }
     
     .done{
@@ -306,7 +302,7 @@ body {
         background-color: inherit;
         border: none;
         box-shadow: none;
-        overflow: visible;
+        overflow: scroll;
         
         h2{
             margin-top: 0;
@@ -357,22 +353,60 @@ body {
         border-radius: 20px;
         margin-top: 0 !important;
         margin: 1vh 2vw;
+        padding-bottom: 1vh;
     }
     
     #tabResumo{
         background-color: inherit;
         border: none;
         box-shadow: none;
-        overflow: visible;
+        overflow: scroll;
+        height: auto;
+
+        .resumo{
+            padding-bottom: 5vh;
+            display: inline;
+            
+            .line{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                padding-bottom: 0.1vh;
+            }
+            
+            i, svg{
+                color: #700C0E;
+                padding: 0 0vw;
+                position: relative;
+                opacity: 0.4;
+                bottom: 8vw;
+                right: 20vw;
+                font-size: 8vw;
+                height: 8vw;
+                width: auto;
+                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
         
         h2{
-            padding-top: 2.5vh;
+            padding: 1.5vh;
             margin: 0;
             text-align: center;
         }
         
         p{
-            margin: 1.5vh 0;
+            font-size: 3.5vw;
+            margin: 0;
+            color: $color-primary;
+            font-weight: bold;
+            padding: 0;
+        }
+
+        .filler{
+            color: white;
+            font-weight: normal;
+            font-size: 3vw;
         }
         
         .tabBg{
@@ -380,6 +414,7 @@ body {
             margin-top: 0;
             border-radius: 20px;
              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+             padding-bottom: 3vh;
         }
         
         button{        
@@ -390,10 +425,10 @@ body {
             border-radius: 60px;
             font-size: 5vw;
             padding: 2.5vh 28vw;
-            margin-top: 8vh;
+            margin-top: 2vh;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
             text-align: center;
         }
     }
@@ -447,6 +482,12 @@ iframe{
     i{
         font-size: 4vw;
     }
+
+    .buttons-navegation{
+        display: flex;
+        flex-direction: row;
+    }
+
 }
 
 
@@ -834,20 +875,24 @@ iframe{
         }
 
         .img-logo{
-                height: 17vw !important;
-                width: 17vw !important;
-                padding: 2vw;
-                margin: 0;
-            }
+            height: 17vw !important;
+            width: 17vw !important;
+            padding: 2vw;
+            margin: 0;
+        }
     
 
-            .title-aba{
-                font-size: 1.5vw !important;
-                line-height: 5vh;
-                margin: 0 0;
-                line-height: 0;
-                font-weight: bold;
-            }
+        .title-aba{
+            font-size: 1.5vw !important;
+            line-height: 5vh;
+            margin: 0 0;
+            line-height: 0;
+            font-weight: bold;
+        }
+
+        .top-itens-small{
+            flex-direction: column;
+        }
     }
 
     #bottom-navbar {
@@ -887,6 +932,11 @@ iframe{
 
         .active{
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        i{
+            font-size: 2vw;
+            padding-bottom: 1vh;
         }
     } 
     
@@ -958,17 +1008,81 @@ iframe{
                         text-align: left;
                         margin-top: auto;
                         margin-bottom: auto;
+                        font-size: 1.5vw;
+                        line-height: 2vh;
+
+                        i{
+                            font-size: 1vw;
+                        }
                     }
                     
                     img{
                         border-radius: 50%;
-                        width: 10vw;
+                        width: 7vw;
                         height: auto;
                         border: 2px solid $color-primary;
                     }
                 }
-                button{
-                    padding-bottom: 2vh;
+            }
+
+            #myCalendar{
+                margin: 4vh 6vw;
+                padding-bottom: 3vh;
+            }
+
+            #tabResumo{
+                button{        
+                    font-size: 2.5vh;
+                    padding: 1vh 10vw;
+                    align-content: center;
+                    width: auto;
+                }
+
+                height: auto;
+        
+                .resumo{
+                    padding-bottom: 5vh;
+                    display: inline;
+                    
+                    .line{
+                        display: flex;
+                        flex-direction: column;
+                        align-content: center;
+                        align-items: center;
+                        padding-bottom: 0;
+                    }
+                    
+                    i, svg{
+                        color: #700C0E;
+                        opacity: 0.5;
+                        bottom: 2vw;
+                        right: 15vw;
+                        font-size: 2.5vw;
+                        height: 2.5vw;
+                        width: auto;
+                        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
+
+                }
+                
+                h2{
+                    padding: 1.5vh;
+                    margin: 0;
+                    text-align: center;
+                }
+                
+                p{
+                    font-size: 1.5vw;
+                    margin: 0;
+                    color: $color-primary;
+                    font-weight: bold;
+                    padding: 0;
+                }
+        
+                .filler{
+                    color: white;
+                    font-weight: normal;
+                    font-size: 1vw;
                 }
             }
         }
