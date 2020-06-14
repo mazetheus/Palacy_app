@@ -668,8 +668,6 @@ iframe{
     }
 }
 
-
-/*HISTORICO*/
 #historico {
   display: flex;
   align-items: center;
@@ -810,6 +808,20 @@ iframe{
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);    
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 768px){
 
@@ -973,10 +985,243 @@ iframe{
             }
         }
 
-          
+    #historico {
+        
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-family: 'Roboto' !important;
+        margin-right: 2vw;
+        
+        input{
+            color: $color-primary !important;
+        }
+    
+    .progress-navbar {
+        padding-top: 3vh;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80vw;
+
+    
+        button {
+            position: center;
+            align-content: center;
+            font-size: 3vw;
+            width: 18vw;
+            height: 5vw;
+            background-color: $color-primary;
+            border-radius: 10px;
+            color: $color-secondary;
+            border: 3px solid $color-secondary;
+            font-weight: bold;
+            
+        } 
+
+        .active {
+            background-color: $color-secondary;
+            color: #fff;
+            margin-top: 1vh;
+            border-radius: 10px 10px 0px 0px;
+            
+            transition: margin-top 0.5s;
+        }
+    
+    }
+    
+           .tabcontent {
+        display: none;
+        position: center;
+        align-content: center;
+        font-size: 3.5vw;
+        min-height: 85vh;
+        min-width: 60vw;
+        overflow: scroll;
+        border: none;
+        font-family: "Roboto";
+        background-color: $color-secondary;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+        
+    .atendimento {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        color: $color-primary;
+        width: auto;
+        height: 50px;
+        padding: 2vh 0 2vh 5vw;
+        
+        .infos i{
+            padding-right: 3vw;
+        }
+        
+        .avaliar{
+            text-align: center;
+            margin: auto auto;
+            p{
+                margin: 0;
+                font-size: 2.5vw;
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    }       
+
+    #perfil-logado, #cadastro {
+    
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-family: 'Roboto' !important;
+        margin-right: 2vw;
+        
+        input{
+            color: $color-primary !important;
+        }
+
+        .progress-navbar{
+            padding-top: 0vh;
+            padding-bottom: 0;
+            margin: 0 2vw;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: auto;
+            justify-content: space-around;
+
+            button{        
+                    font-size: 2.5vh;
+                    padding: 1vh 10vw;
+                    align-content: center;
+                    width: auto;
+                    height: auto;
+                }
+
+        }       
+}
+
+#perfil, #perfil-senha, #perfil-editar{
+    
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-family: 'Roboto' !important;
+        margin-right: 2vw;
+        
+        input{
+            color: $color-primary !important;
+        }
+
+        .progress-navbar{
+            padding-top: 0vh;
+            padding-bottom: 0;
+            margin: 0 2vw;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: auto;
+            justify-content: space-around;
+
+            button{        
+                    font-size: 2.5vh;
+                    padding: 1vh 10vw;
+                    align-content: center;
+                    width: auto;
+                    height: auto;
+                }
+
+        }       
+
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+    
+    input{
+        display: flex;
+        border: none;
+        border-bottom: 3px solid $color-secondary;
+        background-color: inherit;
+        text-align: center;
+        padding-top: 2vh;
+        margin-top: 2vh;
+        font-size: 5vw;
+        color: $color-secondary;
+    }
+    
+    
+    ::placeholder{
+        color: $color-secondary;
+        opacity: 0.8;
+    }
+    
+    button{
+        display: flex;
+        border-radius: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .continuar{
+        margin-top: 8vh;
+        background-color: $color-secondary;
+        color: $color-primary;
+        font-size: 5vw;
+        padding: 2.5vh 20vw;
+        border: none;
     }
 
+    .cancelar{
+        margin-top: 2vh;
+        font-size: 4vw;
+        padding: 2vh 8vw;
+        color: $color-secondary;
+        background-color: inherit;
+        border: 4px solid $color-secondary;
+    }
+    
+    .progress-bar{
 
+        margin: 0.5vh auto 2vh auto;
+        color: $color-secondary;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 80%;
+        text-align: center;
+        line-height: 0;
+        font-size: 2vh;
+        pointer-events: none;
+        
+
+        hr{
+            width: 100%;
+            height: 0.5vh;
+            background-color: $color-secondary;
+            margin: 0.8vh -0.5vw 0 -0.5vw;
+            border: none;
+        }
+        
+    }
+    
+}
+
+
+
+}
 
 @keyframes slide-top-logoholder {
     0% {
