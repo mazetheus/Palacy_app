@@ -717,6 +717,17 @@ iframe{
     .top-navbar{
         width: 100%;
     }
+
+    .top-itens-small{
+        display: flex;
+        flex-direction: row;
+        vertical-align: auto;
+
+        h2{
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
     
     .tabcontent {
         display: none;
@@ -1100,65 +1111,62 @@ iframe{
         }
 
     #historico {
-        
-        display: flex;
-        align-items: center;
+    
         flex-direction: row;
-        font-family: 'Roboto' !important;
-        margin-right: 2vw;
-        
-        input{
-            color: $color-primary !important;
+
+        .top-itens-small{
+            margin-top: auto;
+            margin-bottom: auto;
         }
     
-    .progress-navbar {
-        padding-top: 3vh;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 80vw;
+        .progress-navbar {
+            padding-top: 3vh;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80vw;
 
-    
-        button {
+        
+            button {
+                position: center;
+                align-content: center;
+                font-size: 3vw;
+                width: 18vw;
+                height: 5vw;
+                background-color: $color-primary;
+                border-radius: 10px;
+                color: $color-secondary;
+                border: 3px solid $color-secondary;
+                font-weight: bold;
+                
+            } 
+
+            .active {
+                background-color: $color-secondary;
+                color: #fff;
+                margin-top: 1vh;
+                border-radius: 10px 10px 0px 0px;
+                
+                transition: margin-top 0.5s;
+            }
+        
+        }
+        
+        .tabcontent {
+            display: none;
             position: center;
             align-content: center;
-            font-size: 3vw;
-            width: 18vw;
-            height: 5vw;
-            background-color: $color-primary;
-            border-radius: 10px;
-            color: $color-secondary;
-            border: 3px solid $color-secondary;
-            font-weight: bold;
-            
-        } 
-
-        .active {
+            font-size: 3.5vw;
+            min-height: 85vh;
+            min-width: 60vw;
+            overflow: scroll;
+            border: none;
+            font-family: "Roboto";
             background-color: $color-secondary;
-            color: #fff;
-            margin-top: 1vh;
-            border-radius: 10px 10px 0px 0px;
-            
-            transition: margin-top 0.5s;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
         }
-    
-    }
-    
-           .tabcontent {
-        display: none;
-        position: center;
-        align-content: center;
-        font-size: 3.5vw;
-        min-height: 85vh;
-        min-width: 60vw;
-        overflow: scroll;
-        border: none;
-        font-family: "Roboto";
-        background-color: $color-secondary;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-    }
         
     .atendimento {
         display: flex;
