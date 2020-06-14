@@ -44,6 +44,10 @@ body button {
   transition: height 1s;
   transition: width 1s;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
 #top-navbar .title-aba {
   text-align: center;
   color: #2A0001;
@@ -173,6 +177,7 @@ body button {
   border-bottom: 1px solid #fff1d6;
   padding: 2vw 3vh;
 }
+<<<<<<< HEAD
 #agendar .tabcontent .resumo {
   display: flex;
   flex-direction: column;
@@ -187,6 +192,39 @@ body button {
 #agendar .tabcontent .resumo i {
   padding: 0 5vw;
 }
+=======
+
+#agendar .tabcontent .resumo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 2vh;
+}
+
+#agendar .tabcontent .resumo .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#agendar .tabcontent .resumo i {
+  padding: 0 5vw;
+}
+
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
 #agendar .done {
   background-color: #698C5F !important;
   transition: background-color 0.7s;
@@ -258,7 +296,12 @@ body button {
 #agendar #tabHorario {
   background-color: inherit;
   border: none;
+<<<<<<< HEAD
   box-shadow: none;
+=======
+  -webkit-box-shadow: none;
+          box-shadow: none;
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
   overflow: visible;
 }
 #agendar #tabHorario h2 {
@@ -310,9 +353,17 @@ body button {
 #agendar #tabResumo {
   background-color: inherit;
   border: none;
+<<<<<<< HEAD
   box-shadow: none;
   overflow: visible;
 }
+=======
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  overflow: visible;
+}
+
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
 #agendar #tabResumo h2 {
   padding-top: 2.5vh;
   margin: 0;
@@ -325,7 +376,12 @@ body button {
   background-color: #2A0001 !important;
   margin-top: 0;
   border-radius: 20px;
+<<<<<<< HEAD
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+=======
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
 }
 #agendar #tabResumo button {
   display: flex;
@@ -338,7 +394,12 @@ body button {
   margin-top: 8vh;
   margin-left: auto;
   margin-right: auto;
+<<<<<<< HEAD
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+=======
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
   text-align: center;
 }
 
@@ -720,7 +781,10 @@ iframe {
     line-height: 0;
     font-weight: bold;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
   #bottom-navbar {
     position: relative;
     top: 0;
@@ -753,9 +817,15 @@ iframe {
     background: #f2f2f2;
   }
   #bottom-navbar .active {
+<<<<<<< HEAD
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   }
 
+=======
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  }
+>>>>>>> parent of c08bc91... Agendar versão desktop e ajustes mobile
   #agendar {
     display: flex;
     align-items: center;
