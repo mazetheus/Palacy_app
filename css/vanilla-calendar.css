@@ -17,7 +17,7 @@
     background-color: var(--vanilla-calendar-bg-color);
     margin: 0;
     overflow: hidden;
-    width: auto;
+    width: 350px;
 }
 @media (max-width:1200px) {
     .vanilla-calendar {

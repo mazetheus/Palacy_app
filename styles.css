@@ -68,27 +68,6 @@ body button {
   transition: width 1s;
 }
 
-#top-navbar .top-itens {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#top-navbar .top-itens-small {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#top-navbar .top-itens-small h2 {
-  margin: auto;
-}
-
 #top-navbar .title-aba {
   text-align: center;
   color: #2A0001;
@@ -262,6 +241,36 @@ body button {
   padding: 2vw 3vh;
 }
 
+#agendar .tabcontent .resumo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 2vh;
+}
+
+#agendar .tabcontent .resumo .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#agendar .tabcontent .resumo i {
+  padding: 0 5vw;
+}
+
 #agendar .done {
   background-color: #698C5F !important;
   -webkit-transition: background-color 0.7s;
@@ -366,7 +375,7 @@ body button {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  overflow: scroll;
+  overflow: visible;
 }
 
 #agendar #tabHorario h2 {
@@ -427,7 +436,6 @@ body button {
   border-radius: 20px;
   margin-top: 0 !important;
   margin: 1vh 2vw;
-  padding-bottom: 1vh;
 }
 
 #agendar #tabResumo {
@@ -435,63 +443,17 @@ body button {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  overflow: scroll;
-  height: auto;
-}
-
-#agendar #tabResumo .resumo {
-  padding-bottom: 5vh;
-  display: inline;
-}
-
-#agendar #tabResumo .resumo .line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 0.1vh;
-}
-
-#agendar #tabResumo .resumo i, #agendar #tabResumo .resumo svg {
-  color: #700C0E;
-  padding: 0 0vw;
-  position: relative;
-  opacity: 0.4;
-  bottom: 8vw;
-  right: 20vw;
-  font-size: 8vw;
-  height: 8vw;
-  width: auto;
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: visible;
 }
 
 #agendar #tabResumo h2 {
-  padding: 1.5vh;
+  padding-top: 2.5vh;
   margin: 0;
   text-align: center;
 }
 
 #agendar #tabResumo p {
-  font-size: 3.5vw;
-  margin: 0;
-  color: #fff1d6;
-  font-weight: bold;
-  padding: 0;
-}
-
-#agendar #tabResumo .filler {
-  color: white;
-  font-weight: normal;
-  font-size: 3vw;
+  margin: 1.5vh 0;
 }
 
 #agendar #tabResumo .tabBg {
@@ -500,7 +462,6 @@ body button {
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  padding-bottom: 3vh;
 }
 
 #agendar #tabResumo button {
@@ -513,11 +474,11 @@ body button {
   border-radius: 60px;
   font-size: 5vw;
   padding: 2.5vh 28vw;
-  margin-top: 2vh;
+  margin-top: 8vh;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   text-align: center;
 }
 
@@ -572,16 +533,6 @@ iframe {
 
 #bottom-navbar i {
   font-size: 4vw;
-}
-
-#bottom-navbar .buttons-navegation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 #perfil, #perfil-senha, #perfil-editar {
@@ -1096,12 +1047,6 @@ iframe {
     line-height: 0;
     font-weight: bold;
   }
-  #top-navbar .top-itens-small, .top-navbar-big .top-itens-small {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   #bottom-navbar {
     position: relative;
     top: 0;
@@ -1146,10 +1091,6 @@ iframe {
   #bottom-navbar .active {
     -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  }
-  #bottom-navbar i {
-    font-size: 2vw;
-    padding-bottom: 1vh;
   }
   #agendar {
     display: -webkit-box;
@@ -1228,78 +1169,15 @@ iframe {
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 1.5vw;
-    line-height: 2vh;
-  }
-  #agendar #tabBarbeiro .barbeiro p i {
-    font-size: 1vw;
   }
   #agendar #tabBarbeiro .barbeiro img {
     border-radius: 50%;
-    width: 7vw;
+    width: 10vw;
     height: auto;
     border: 2px solid #fff1d6;
   }
-  #agendar #myCalendar {
-    margin: 4vh 6vw;
-    padding-bottom: 3vh;
-  }
-  #agendar #tabResumo {
-    height: auto;
-  }
-  #agendar #tabResumo button {
-    font-size: 2.5vh;
-    padding: 1vh 10vw;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    width: auto;
-  }
-  #agendar #tabResumo .resumo {
-    padding-bottom: 5vh;
-    display: inline;
-  }
-  #agendar #tabResumo .resumo .line {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-bottom: 0;
-  }
-  #agendar #tabResumo .resumo i, #agendar #tabResumo .resumo svg {
-    color: #700C0E;
-    opacity: 0.5;
-    bottom: 2vw;
-    right: 15vw;
-    font-size: 2.5vw;
-    height: 2.5vw;
-    width: auto;
-    -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  #agendar #tabResumo h2 {
-    padding: 1.5vh;
-    margin: 0;
-    text-align: center;
-  }
-  #agendar #tabResumo p {
-    font-size: 1.5vw;
-    margin: 0;
-    color: #fff1d6;
-    font-weight: bold;
-    padding: 0;
-  }
-  #agendar #tabResumo .filler {
-    color: white;
-    font-weight: normal;
-    font-size: 1vw;
+  #agendar #tabBarbeiro button {
+    padding-bottom: 2vh;
   }
 }
 
