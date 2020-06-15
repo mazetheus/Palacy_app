@@ -1079,6 +1079,9 @@ iframe {
     background-size: cover;
     height: 100%;
   }
+  iframe {
+    height: 95vh;
+  }
   #top-navbar, .top-navbar-big {
     position: relative;
     -webkit-box-orient: vertical;
@@ -1121,8 +1124,7 @@ iframe {
   #bottom-navbar {
     position: relative;
     top: 0;
-    z-index: 1;
-    max-height: 5vw;
+    height: 5vh;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -1145,7 +1147,7 @@ iframe {
     position: relative;
     background-color: #2A0001;
     width: 7vw;
-    height: 5vw;
+    height: 5vh;
     line-height: 2vh;
     font-size: 1vw;
   }
@@ -1327,8 +1329,21 @@ iframe {
     margin-top: auto;
     margin-bottom: auto;
   }
+  #historico .tabcontent {
+    font-size: 2vw;
+    height: 60vh;
+    width: 70vw;
+    margin: 0 5vw;
+    overflow: scroll;
+    border: none;
+    font-family: "Roboto";
+    background-color: #2A0001;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
   #historico .progress-navbar {
-    padding-top: 3vh;
+    padding-top: 1vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1344,10 +1359,8 @@ iframe {
   }
   #historico .progress-navbar button {
     position: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    font-size: 3vw;
-    width: 18vw;
+    font-size: 2vw;
+    width: 25vw;
     height: 5vw;
     background-color: #fff1d6;
     border-radius: 10px;
@@ -1362,48 +1375,6 @@ iframe {
     border-radius: 10px 10px 0px 0px;
     -webkit-transition: margin-top 0.5s;
     transition: margin-top 0.5s;
-  }
-  #historico .tabcontent {
-    display: none;
-    position: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    font-size: 3.5vw;
-    min-height: 85vh;
-    min-width: 60vw;
-    overflow: scroll;
-    border: none;
-    font-family: "Roboto";
-    background-color: #2A0001;
-    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-  }
-  #historico .atendimento {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    color: #fff1d6;
-    width: auto;
-    height: 50px;
-    padding: 2vh 0 2vh 5vw;
-  }
-  #historico .atendimento .infos i {
-    padding-right: 3vw;
-  }
-  #historico .atendimento .avaliar {
-    text-align: center;
-    margin: auto auto;
-  }
-  #historico .atendimento .avaliar p {
-    margin: 0;
-    font-size: 2.5vw;
   }
   #perfil-logado, #cadastro {
     display: -webkit-box;
@@ -1447,12 +1418,77 @@ iframe {
     width: auto;
     height: auto;
   }
-  #perfil, #perfil-senha, #perfil-editar {
-    overflow: visible;
+  #perfil .img-logo, #perfil-senha .img-logo, #perfil-editar .img-logo {
+    height: 25vw !important;
+    width: 25vw !important;
+  }
+  #perfil .title-agendamento, #perfil-senha .title-agendamento, #perfil-editar .title-agendamento {
+    font-size: 3vw;
   }
   #perfil #top-navbar, #perfil-senha #top-navbar, #perfil-editar #top-navbar {
-    width: 80vw;
-    height: 100%;
+    top: 0vh;
+    width: 95vw;
+    height: 100vh;
+    border-radius: 0 60px 60px 0;
+  }
+  #perfil .progress-bar, #perfil-senha .progress-bar, #perfil-editar .progress-bar {
+    width: 40%;
+  }
+  #perfil .progress-bar hr, #perfil-senha .progress-bar hr, #perfil-editar .progress-bar hr {
+    height: 0.3vh;
+    margin: 0.8vh -0.1vw 0 -0.1vw;
+  }
+  #perfil h2, #perfil-senha h2, #perfil-editar h2 {
+    margin: 4vh 30vw 0 30vw;
+  }
+  #perfil input, #perfil-senha input, #perfil-editar input {
+    border-bottom: 3px solid #2A0001;
+    padding-top: 2vh;
+    margin-top: 2vh;
+    font-size: 3vw;
+    color: #2A0001;
+  }
+  #perfil ::-webkit-input-placeholder, #perfil-senha ::-webkit-input-placeholder, #perfil-editar ::-webkit-input-placeholder {
+    color: #2A0001;
+    opacity: 0.8;
+  }
+  #perfil :-ms-input-placeholder, #perfil-senha :-ms-input-placeholder, #perfil-editar :-ms-input-placeholder {
+    color: #2A0001;
+    opacity: 0.8;
+  }
+  #perfil ::-ms-input-placeholder, #perfil-senha ::-ms-input-placeholder, #perfil-editar ::-ms-input-placeholder {
+    color: #2A0001;
+    opacity: 0.8;
+  }
+  #perfil ::placeholder, #perfil-senha ::placeholder, #perfil-editar ::placeholder {
+    color: #2A0001;
+    opacity: 0.8;
+  }
+  #perfil button, #perfil-senha button, #perfil-editar button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  }
+  #perfil .continuar, #perfil-senha .continuar, #perfil-editar .continuar {
+    margin-top: 8vh;
+    background-color: #2A0001;
+    color: #fff1d6;
+    font-size: 5vw;
+    padding: 2.5vh 20vw;
+    border: none;
+  }
+  #perfil .cancelar, #perfil-senha .cancelar, #perfil-editar .cancelar {
+    margin-top: 2vh;
+    font-size: 4vw;
+    padding: 2vh 8vw;
+    color: #2A0001;
+    background-color: inherit;
+    border: 4px solid #2A0001;
   }
 }
 
